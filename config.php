@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'luniversitenumerique';
-$THEME->sheets = [];
+$THEME->sheets = ['main'];
 $THEME->javascripts_footer = [];
 $THEME->editor_sheets = [];
 $THEME->parents = ['boost'];
