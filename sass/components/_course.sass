@@ -1,0 +1,201 @@
+.default-course-img
+    background-image: $default-course-img !important
+
+#region-main-settings-menu
+    &.has-blocks
+        display: flex
+        width: 100%
+
+.un-course-list
+    &:first-child
+        margin-top: 50px
+    .card
+        background-color: $white
+        -moz-box-shadow: 0px 3px 8px $card-color
+        -webkit-box-shadow: 0px 3px 8px $card-color
+        box-shadow: 0px 3px 8px $card-color
+        .card
+            &-body
+                flex-grow: 0
+                min-height: 88px
+                padding-bottom: 0 !important
+                .downloadable
+                    background: $pastel-purple
+                    color: $main
+                    padding: 3px 6px 2px 6px
+                    border-radius: 2px
+                    font-size: .85em
+                    display: inline
+                    i
+                        margin-right: 7px
+                .card-title
+                    +bold-text($color: $main, $size: 1em)
+                    margin-bottom: 10px
+            &-img-top
+                width: 100%
+                height: 130px
+                object-fit: cover
+            &-footer
+                background-color: $white
+        .progress
+            border-radius: 0
+
+.course-container
+    max-width: $max-width
+
+#page-header
+    .page-context-header
+        padding: 0
+        .page-header-headings
+            h1
+                +bold-text($color: $main, $size: 2rem)
+                margin-bottom: 50px
+
+#page-course-view-topics
+    #course-region-main-box
+        background-color: white
+        #page-header
+            .img-fluid
+                width: 100%
+        #course-region-main
+            .course-content
+                .section-title
+                    margin: 0
+                    a
+                        color: $main
+                        font-weight: bold
+                        font-family: $main-font-semibold
+                        font-size: 1.6rem
+                ul.topics
+                    li.section
+                        margin-top: 2rem
+                        border-radius: 0px
+                        padding: 0
+                        background-color: white
+                        &#section-0
+                            border: 0
+                            box-shadow: none
+                            background-color: transparent
+                            .sectionname
+                                background-color: transparent !important
+                        .summarytext
+                            margin: 0
+                            a
+                                color: $text
+                            .collapse-link.show-summary
+                                &:hover
+                                    text-decoration: none
+                                &::before
+                                    content: "\f138"
+                                    font-family: FontAwesome
+                                    padding-right: 5px
+                                    color: $blue-text
+                                &[aria-expanded="true"]
+                                    &::before
+                                        content: "\f13a"
+                        .section-summary-activities
+                            .card-center
+                                text-align: center
+                                border-right: 3px solid $bg-grey
+                                background-color: transparent
+                                &:last-child
+                                    border-right: 0px
+                            .activity-count
+                                font-weight: bold
+                                .icon
+                                    width: 24px
+                                    height: 24px
+                        .content
+                            ul.section
+                                margin: 0
+                                padding-left: 0
+                .sectionname
+                    padding: .4em .55em
+                    color: $main
+                    font-weight: bold
+                    font-family: $main-font-semibold !important
+                    font-size: 1.8em
+                    text-align: left
+                    margin-bottom: 0
+                    &:hover
+                        text-decoration: none !important
+                    span,
+                    a
+                        font-family: $main-font-semibold !important
+                        font-weight: bold !important
+                        color: $main !important
+                        &:hover
+                            text-decoration: none !important
+                .single-section
+                    margin-top: 2em
+                    ul.topics
+                        li.section
+                            box-shadow: none !important
+                            background-color: transparent
+                    .sectionname
+                        background-color: $pastel-purple
+                        padding: .4em .55em
+                        color: $main
+                        font-weight: bold
+                        font-family: $main-font-semibold !important
+                        font-size: 1.8em
+                        text-align: left
+                        margin-bottom: 0
+                    .section-navigation
+                        padding: 0
+                        &.navigationtitle
+                            .mdl-left,
+                            .mdl-right
+                                display: none
+                        &.mdl-bottom
+                            margin-top: 60px
+                    ul.topics
+                        li.section.main
+                            border: 0px
+                            .summary
+                                margin-left: 0
+
+.progress
+    background-color: transparent
+    border-radius: 3px
+    .progress-bar
+        display: -ms-flexbox
+        display: flex
+        -ms-flex-direction: column
+        flex-direction: column
+        -ms-flex-pack: center
+        justify-content: center
+        color: $white
+        text-align: center
+        white-space: nowrap
+        background-color: $green-alt
+        transition: width .6s ease
+        span
+            color: $progress-color
+            position: absolute
+            margin-left: 5%
+            font-weight: bold
+
+.mdl
+    &-left > a
+        &::before
+            +mdl-arrow("\f053", 0, 10px)
+        .larrow
+            display: none
+    &-right > a
+        &::after
+            +mdl-arrow("\f054", 10px, 0)
+        .rarrow
+            display: none
+
+.topics
+    .section
+        &.section-summary
+            padding: 1.2em 0.1em !important
+            box-shadow: 0px 3px 8px $course-section
+            border: 2px solid $pastel-purple
+            .section-icon
+                background-image: $default-course-section
+                background-repeat: no-repeat
+                background-position-x: 100%
+                max-height: 130px
