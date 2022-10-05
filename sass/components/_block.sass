@@ -1,0 +1,42 @@
+#block-region-side-pre
+    .block-region
+        section.block
+            background-color: $pastel-purple
+            border: 0px
+            +dropdown-menu
+            .card-title
+                color: $main
+                font-family: "poppins-semibold"
+                font-weight: bold
+                font-size: 1.4rem
+            // Calendar block
+            .dayblank
+                background-color: $block-cal-dayblank
+                border: 2px solid $pastel-purple
+            .day
+                background-color: $block-cal-day
+                border: 2px solid $pastel-purple
+
+.block
+    &-recentlyaccessedcourses,
+    &_myoverview.block
+        .card
+            -moz-box-shadow: 0px 3px 8px $block-card-color
+            -webkit-box-shadow: 0px 3px 8px $block-card-color
+            box-shadow: 0px 3px 8px $block-card-color
+            .card-img
+                padding: 10px
+            .aalink.coursename
+                @include bold-text($color: $main, $size: 1em)
+            .progress
+                border-radius: 0px
+                border: 0px !important
+                background: $pastel-purple !important
+    &_online_users
+        .card-body
+            .card-text
+                .info
+                    text-align: left
+                    color: $text-alt !important
+                    margin-bottom: 0.3em
+                    font-size: 95%
