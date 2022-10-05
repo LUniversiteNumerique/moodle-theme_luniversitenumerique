@@ -1,0 +1,133 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page footer.
+}}
+<div id="goto-top-link">
+    {{! go to top is sticky to footer so needs to be sibling }}
+    <a class="btn btn-light" role="button" href="#">
+        {{#pix}} i/up, core, {{#str}} totop, theme_boost {{/str}}{{/pix}}
+    </a>
+</div>
+
+<footer id="footer-main" class="mt-0 pt-4 pb-4">
+    <div class="border-mixin pb-4">
+        <div class="container">
+            <div class="footer-logos section-inner column-one grid-item row">
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="https://www.uved.fr/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-uved.png" class="image wp-image-4981  attachment-full size-full" alt="" width="235" height="90">
+                        </a>
+                    </div>
+                </div>
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="https://www.uness.fr/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-uness.svg" class="image wp-image-4962  attachment-medium size-medium" alt="" width="200" height="77">
+                        </a>
+                    </div>
+                </div>
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="http://www.unit.eu/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-unit.png" class="image wp-image-4982  attachment-full size-full" alt="" width="235" height="90">
+                        </a>
+                    </div>
+                </div>
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="http://www.iutenligne.net/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-iut-en-ligne.png" class="image wp-image-4983  attachment-full size-full" alt="" width="235" height="90">
+                        </a>
+                    </div>
+                </div>
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="http://www.uoh.fr/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-uoh.png" class="image wp-image-4984  attachment-full size-full" alt="" width="235" height="90">
+                        </a>
+                    </div>
+                </div>
+                <div class="widget col-6 col-md-2">
+                    <div class="widget-content">
+                        <a href="http://www.aunege.org/">
+                            <img src="http://luniversitenumerique.fr/wp-content/uploads/2020/05/logo-aunege.svg" class="image wp-image-4961  attachment-medium size-medium" alt="" width="200" height="77">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <a href="{{{ config.wwwroot }}}" class="navbar-brand">
+                    <img src="{{{logo-white}}}" alt="Logo Université Numérique" class="logo">
+                </a>
+            </div>
+            <div class="col-12 col-md-4">
+                <ul class="menu">
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/vous-etes/">Vous êtes ?</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/presentation/">Nous sommes</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/thematiques/">Thématiques</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/ressources/">Ressources</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/projets/">Projets</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/evenements/">Événements</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/actualites/">Actus</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <ul class="menu">
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/mentions-legales/">Mentions légales</a></li>
+                    <li class="menu-item"><a href="http://luniversitenumerique.fr/faq/">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-4 footer-credits border-mixin">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <p class="footer-copyright pt-4">
+                    &copy; {{{year}}} <a href="http://luniversitenumerique.fr/" class="un-link">L'Université Numérique</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-8 mr-auto">
+                <div id="course-footer">{{{ output.course_footer }}}</div>
+
+                {{# output.page_doc_link }}
+                    <p class="helplink">{{{ output.page_doc_link }}}</p>
+                {{/ output.page_doc_link }}
+
+                {{{ output.login_info }}}
+                <div class="tool_usertours-resettourcontainer"></div>
+                {{{ output.home_link }}}
+                <nav class="nav navbar-nav d-md-none" aria-label="{{#str}}custommenu, admin{{/str}}">
+                    {{# output.custom_menu_flat }}
+                        <ul class="list-unstyled pt-3">
+                            {{> theme_boost/custom_menu_footer }}
+                        </ul>
+                    {{/ output.custom_menu_flat }}
+                </nav>
+                {{{ output.standard_footer_html }}}
+                {{{ output.standard_end_of_body_html }}}
+            </div>
+        </div>
+    </div>
+</footer>

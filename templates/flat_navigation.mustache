@@ -1,0 +1,116 @@
+<ul class="list-group">
+{{# flatnavigation }}
+    {{^iscustom}}
+        {{#showdivider}}
+            </ul>
+            <ul class="list-group">
+        {{/showdivider}}
+        {{#action}}
+            {{^is_section}}
+                <a class="{{#isactive}}active{{/isactive}}" href="{{{action}}}">
+                    <li class="list-group-item list-group-item-action {{#isactive}}active font-weight-bold{{/isactive}}" data-key="{{key}}">
+                        <div class="ml-{{get_indent}}">
+                            <div class="media">
+                            {{#icon.pix}}
+                                <span class="media-left">
+                                    {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                </span>
+                            {{/icon.pix}}
+                                <span class="media-body">{{{text}}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            {{/is_section}}
+        {{/action}}
+        {{^action}}
+                <li class="list-group-item collapsable" data-key="{{key}}" {{#children}}data-toggle="collapse" href="#collapse-{{icon.component}}" aria-expanded="false" aria-controls="collapse-{{icon.component}}"{{/children}}>
+                    <a class="collapser m-l-{{get_indent}} has-arrow">
+                        <div class="ml-{{get_indent}}">
+                            <div class="media">
+                            {{#icon.pix}}
+                                <span class="media-left">
+                                    {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                </span>
+                            {{/icon.pix}}
+                                <span class="media-body">{{{text}}}</span>
+                            </div>
+                        </div>
+                    </a>
+                    <ul id="collapse-{{icon.component}}" class="collapse mt-3">
+                        {{#children}}
+                            {{^is_section}}
+                                <li class="{{#isactive}}active{{/isactive}}" data-key="{{key}}">
+                                    <a class="{{#isactive}}active{{/isactive}}" href="{{{action}}}">
+                                        <div class="ml-{{get_indent}}">
+                                            <div class="media">
+                                            {{#icon.pix}}
+                                                <span class="media-left">
+                                                    <i class="icon fa fa-square fa-fw"></i>
+                                                </span>
+                                            {{/icon.pix}}
+                                                <span class="media-body">{{{text}}}</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            {{/is_section}}
+                        {{/children}}
+                    </ul>
+                </li>
+        {{/action}}
+    {{/iscustom}}
+
+    {{#iscustom}}
+        {{#iscoursehome}}
+            <a class="{{#isactive}}active{{/isactive}} coursehome" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+                <li class="list-group-item" data-key="{{key}}">
+                    <div class="ml-{{get_indent}}">
+                        <div class="media">
+                        {{#icon.pix}}
+                            <span class="media-left">
+                                <i class="fa fa-sign-out pr-2"></i>
+                            </span>
+                        {{/icon.pix}}
+                            <span class="media-body">{{{text}}}</span>
+                        </div>
+                    </div>
+                </li>
+            </a>
+        {{/iscoursehome}}
+
+        {{^iscoursehome}}
+            {{#action}}
+                <a class="{{#isactive}}active{{/isactive}}" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+                    <li class="list-course-item list-group-item {{#isactive}}active{{/isactive}}">
+                        <div class="ml-{{get_indent}}">
+                            <div class="media">
+                            {{#icon.pix}}
+                                <span class="media-left">
+                                    {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                </span>
+                            {{/icon.pix}}
+                                <span class="media-body">{{{text}}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            {{/action}}
+            {{^action}}
+            <div class="list-course-item list-group-item" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+                <div class="ml-{{get_indent}}">
+                    <div class="media">
+                    {{#icon.pix}}
+                        <span class="media-left">
+                            {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                        </span>
+                    {{/icon.pix}}
+                        <span class="media-body">{{{text}}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/action}}
+        {{/iscoursehome}}
+    {{/iscustom}}
+{{/ flatnavigation }}
+</ul>

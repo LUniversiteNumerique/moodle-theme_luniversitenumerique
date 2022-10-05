@@ -1,0 +1,185 @@
+.h5p-advanced-text h2,
+.h5p-advanced-text h3,
+.h5p-advanced-text h4,
+.h5p-advanced-text h5,
+.h5p-advanced-text h6 {
+    color: rgb(26, 35, 126) !important;
+    font-weight: 600 !important;
+}
+
+.h5p-advanced-text h4,
+.h5p-advanced-text h5,
+.h5p-advanced-text h6 {
+    color: rgb(26, 35, 126) !important;
+}
+
+.h5p-advanced-text h2 {
+    display: inline-flex;
+    background-image: linear-gradient(45deg, rgb(151, 192, 90), rgb(35, 170, 225) 30%, rgb(246, 148, 31));
+    background-position: 0px 100%;
+    background-position-x: 0px;
+    background-position-y: 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 2px;
+    box-sizing: border-box;
+    padding-bottom: 14px;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+}
+
+.h5p-advanced-text h3 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.h5p-advanced-text h3 strong {
+    font-weight: 600 !important;
+}
+
+.h5p-advanced-text hr {
+    display: none;
+}
+
+.h5p-iframe > body {
+    font-family: "poppins-regular", "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+.h5p-box-wrapper {
+    box-shadow: none !important;
+}
+
+.h5p-joubelui-button {
+    background-color: rgb(26, 35, 126);
+    border-radius: 0px;
+    padding: 11px 17px;
+    text-transform: uppercase;
+}
+
+.h5p-accordion .h5p-panel-title {
+    border: 2px solid rgb(26, 35, 126);
+    border-bottom: 0px;
+}
+
+.h5p-accordion .h5p-panel-title:nth-last-child(2) {
+    border-bottom: 2px solid rgb(26, 35, 126) !important;
+}
+
+.h5p-accordion .h5p-panel-title[aria-expanded="true"]:nth-last-child(2) {
+    border-bottom: 0px !important;
+}
+
+.h5p-accordion .h5p-panel-title {
+    color: rgb(26, 35, 126);
+}
+
+.h5p-accordion .h5p-panel-title::before {
+    color: rgb(26, 35, 126) !important;
+}
+
+.h5p-accordion .h5p-panel-title:hover {
+    background: rgb(26, 35, 126);
+    color: #FFFFFF;
+}
+
+.h5p-accordion .h5p-panel-title:hover::before {
+    color: #FFFFFF !important;
+}
+
+.h5p-accordion .h5p-panel-title[aria-expanded="true"]:hover {
+    color: rgb(26, 35, 126) !important;
+    background: #FFFFFF;
+}
+
+.h5p-accordion .h5p-panel-title:first-child {
+    border-top: 2px solid rgb(26, 35, 126) !important;
+}
+
+.h5p-accordion .h5p-panel-title[aria-expanded="true"]:hover::before {
+    color: rgb(26, 35, 126) !important;
+}
+
+.h5p-accordion .h5p-panel-content {
+    padding-top: 10px;
+    border: 2px solid rgb(26, 35, 126);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.h5p-accordion .h5p-panel-content[aria-hidden="false"] {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.h5p-accordion .h5p-panel-content:last-child {
+    border-bottom: 2px solid rgb(26, 35, 126);
+}
+
+.h5p-course-presentation .h5p-current {
+    background-color: rgba(158, 167, 251, 0.09);
+}
+
+.h5p-audio-wrapper .h5p-audio {
+    min-height: 75px !important;
+}
+
+.h5p-advanced-text ul,
+.h5p-advanced-text ol {
+    margin: .25em 0 1.15em 0;
+}
+
+.h5p-advanced-text ul > li,
+.h5p-advanced-text ol > li {
+    margin: 0 0 0.1em 1.2em
+}
+
+/* h5p book */
+
+.h5p-interactive-book-status-progressbar-back,
+.h5p-interactive-book-navigation-chapter-button.h5p-interactive-book-navigation-current {
+    background-color: #f0f1fc !important;
+}
+
+.h5p-interactive-book-status-progressbar-front {
+    background-color: #a8f0cb !important;
+}
+
+.h5p-interactive-book-status-menu.h5p-interactive-book-status-menu-active,
+.h5p-interactive-book-navigation-maintitle {
+    background-color: rgb(26, 35, 126) !important;
+}
+
+.h5p-interactive-book-status-arrow,
+.h5p-interactive-book-status-fullscreen {
+    background-color: #f0f1fc !important;
+}
+.navigation-button,
+.h5p-interactive-book-status-fullscreen:before {
+    color: rgb(26, 35, 126) !important;
+}
+
+.h5p-table table {
+    border-collapse: collapse;
+}
+
+.h5p-table tr th,
+.h5p-table tr td {
+    border: 1px solid #76bbff;
+    padding: 4px 8px;
+}
+
+.h5p-interactive-book-cover-readbutton button {
+    background-color: rgb(26, 35, 126) !important;
+    border-radius: 0 !important;
+}
+
+.h5p-interactive-book .h5p-question-introduction,
+.h5p-interactive-book .h5p-question-content,
+.h5p-interactive-book .h5p-question-feedback,
+.h5p-interactive-book .h5p-question-buttons {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.h5p-interactive-book .question-container h3 {
+    color: rgb(26, 35, 126) !important;
+}

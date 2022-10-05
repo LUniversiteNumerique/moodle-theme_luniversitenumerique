@@ -1,0 +1,76 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper" class="d-print-block">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    {{> theme_luniversitenumerique/navbar }}
+    {{> theme_luniversitenumerique/nav-drawer }}
+
+    <div id="page" class="container-fluid d-print-block">  
+        <div id="page-content" class="container course-container pb-3 d-print-block">
+            <div class="row">
+                <div class="{{#hasblocks}}col-12 col-lg-9{{/hasblocks}}{{^hasblocks}}col-12{{/hasblocks}}">
+                    <div class="row">
+                        <div id="course-region-main-box" class="col-12 mt-0 mb-5 p-2 p-md-4 p-lg-5">
+                            {{{ output.full_header }}}
+
+                            {{#hasregionmainsettingsmenu}}
+                            <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
+                                <div> {{{ output.region_main_settings_menu }}} </div>
+                            </div>
+                            {{/hasregionmainsettingsmenu}}
+                            <section id="course-region-main" aria-label="{{#str}}content{{/str}}">
+
+                                {{#hasregionmainsettingsmenu}}
+                                    <div class="region_main_settings_menu_proxy"></div>
+                                {{/hasregionmainsettingsmenu}}
+                                {{{ output.course_content_header }}}
+                                {{{ output.main_content }}}
+                                {{{ output.activity_navigation }}}
+                                {{{ output.course_content_footer }}}
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                {{#hasblocks}}
+                    <section data-region="blocks-column" class="col-12 col-lg-3 d-print-none mt-5 mb-3" aria-label="{{#str}}blocks{{/str}}">
+                        {{{ sidepreblocks }}}
+                    </section>
+                {{/hasblocks}}
+            </div>
+        </div>
+    </div>
+    {{{ output.standard_after_main_region_html }}}
+    {{> theme_luniversitenumerique/footer-light }}
+</div>
+
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+
+M.util.js_pending('theme_boost/drawer');
+require(['theme_boost/drawer'], function(drawer) {
+    drawer.init();
+    M.util.js_complete('theme_boost/drawer');
+});
+
+require(['theme_luniversitenumerique/h5p-download'], function(script) {
+    script.init();
+});
+
+require(['theme_luniversitenumerique/punchy-infos'], function(script) {
+    script.init();
+});
+
+require(['theme_luniversitenumerique/punchy-section-tweaking'], function(script) {
+    script.init();
+});
+{{/js}}

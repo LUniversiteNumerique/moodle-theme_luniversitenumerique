@@ -1,0 +1,13 @@
+{
+    "name": "moodle-theme_luniversitenumerique",
+    "version": "1.0.0",
+    "description": "moodle-theme_luniversitenumerique",
+    "main": "src/index.ts",
+    "repository": "https://github.com/luniversitenumerique/moodle-theme_luniversitenumerique",
+    "author": "Pierre Duverneix",
+    "license": "GPL-3.0",
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+}

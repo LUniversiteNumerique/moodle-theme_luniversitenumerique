@@ -1,0 +1,101 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+
+<div id="frontpage-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <div class="container-fluid header-navbar-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{>theme_luniversitenumerique/frontpage-navbar}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="frontpage-banner" class="container-fluid">
+        <div class="container">
+            <div class="row heading">
+                <div class="col-12 col-lg-5 mr-auto slogan">
+                    <h1>
+                        Plate-forme de partage de ressources pédagogiques
+                    </h1>
+                    <p class="mt-5 mb-5">
+                        La plate-forme Moodle de <strong>l'Université Numérique</strong> est un centre de dépôt de ressources pédagogiques numériques qui prolonge 
+                        l’initiative “<strong>Je contribue</strong>” et qui permet à tout établissement, tout enseignant, de soumettre de nouveaux supports 
+                        numériques qui, une fois indexés, deviendront accessibles à tous.
+                    </p>
+                    <p class="mb-5">
+                        <a href="{{{ config.wwwroot }}}/login/index.php" alt="Connexion" class="btn-un">
+                            Connexion <i class="fa fa-arrow-right pl-2"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-7 brand-bg mt-5 mt-lg-0"></div>
+            </div>
+        </div>
+    </div>
+
+    {{#hasblocks}}
+        <div class="container-fluid category-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="home-block-container px-0">
+                            {{{ sidepreblocks }}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/hasblocks}}
+
+    <div class="container frontpage-container">
+        <div class="row">
+            <div class="col-12 col-lg-7 mr-auto px-3">
+                <p class="mb-0">
+                    Grâce au Moodle de <a href="http://luniversitenumerique.fr/" target="_blank" alt="Site de L'Université Numérique" class="un-link">L'Université Numérique</a>,
+                    les établissements et les enseignants disposent de ressources pédagogiques
+                    numériques qu'ils peuvent facilement consulter, récupérer et intégrer dans leurs propres plates-formes pédagogiques.
+                    <br><br>
+                    De même que l'offre de parcours types sur <a href="http://www.fun-ressources.fr/" target="_blank" alt="Site de FUN-ressources" class="un-link">FUN-ressources</a>
+                    en constante évolution, les ressources partagées sur
+                    cette plate-forme Moodle ont vocation à être toujours plus nombreuses.
+                </p>
+                <p>Découvrez notre guide pour télécharger nos contenus :</p>
+                <div class="mt-5">
+                    <a class="btn-un" href="/local/documentation/telechargement.php">Télécharger les contenus</a>
+                </div>
+            </div>
+            <div class="col-8 col-lg-4 mx-auto d-none d-lg-block">
+                <img src="{{{promo-un}}}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="wrapper mt-5 pb-5">
+            <div class="container">
+                <div id="page-content" class="row">
+                    <div id="region-hidden" class="col-12 d-none">
+                        {{{ output.main_content }}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{{ output.standard_after_main_region_html }}}
+</div>
+
+{{> theme_luniversitenumerique/footer }}
+
+</body>
+</html>
+{{#js}}
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) { mod.init(); });
+{{/js}}
