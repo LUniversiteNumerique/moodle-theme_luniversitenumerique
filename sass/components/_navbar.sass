@@ -1,0 +1,125 @@
+.site-name
+    display: none !important 
+
+#drawer-toggle
+    .btn
+        padding: 0.45em 0.95em
+        background-color: $white
+        border-color: $main
+        border-width: 2px
+        border-style: solid
+        box-sizing: content-box
+        color: $main
+        &:hover
+            text-decoration: none
+            background-color: $main
+            color: $white
+
+.navbar,
+.navbar-light
+    background: transparent !important
+
+.frontpage-navbar
+    max-height: 200px
+    box-shadow: none
+    .navbar-logo
+        width: 300px
+    ul.navbar-nav
+        li.nav-item
+            a
+                +semibold-text($color: $main)
+            
+// User top navbar navigation
+ul.nav.navbar-nav
+    .nav-item
+        .icon
+            color: $main 
+
+.dropdown-menu
+    background-color: $main
+    border-radius: 0.4rem 0 0.4rem 0.4rem
+    +dropdown-menu
+    *
+        color: $white
+        border: 0px
+
+// Nav Drawer
+#nav-drawer
+    background-color: $bg-grey
+    &:hover,
+    &:focus,
+    &:active
+        outline: 0 !important
+    a
+        color: $nav-drawer-link
+        border: 0
+        &:hover
+            color: $nav-drawer-link-hover
+            text-decoration: none
+    .list-group-item,
+    .list-coursehome,
+    .list-course-item
+        padding: 0.6rem .5rem
+        background-color: transparent
+        color: $nav-drawer-link
+        border: 0
+        border-radius: 4px
+        font-weight: bold
+        &[data-parent-key="mycourses"]
+            display: none !important
+        &:hover
+            color: $nav-drawer-link-hover
+            text-decoration: none
+            background-color: $pastel-purple
+        &.active
+            background-color: $alt-blue
+            color: $white
+            .icon
+                color: $white !important
+            &:hover
+                color: $white
+        a
+            border: 0
+            &:hover
+                text-decoration: none
+        .icon
+            color: $icon-purple
+            &.fa-folder
+                color: $light-blue2 !important
+        &.collapsable
+            background-color: $pastel-purple
+            border-left: 5px solid $icon-purple
+            border-width: 5px
+            border-radius: 0
+            transition: border-width 0.2s ease-in-out
+            .collapser 
+                color: rgba(0,0,0,1) 
+            &[aria-expanded="false"],
+            &.collapsed
+                transition: border-width 0.2s ease-in-out
+                border-width: 0px
+                background-color: $nav-drawer-link-hover
+                .collapser
+                    color: $nav-drawer-link 
+            ul
+                padding-left: 0
+                a
+                    padding: 0.75rem 0
+    .coursehome
+        margin-top: 15px
+        padding-top: 15px
+        border-top: 3px solid $grey
+    .list-course-item
+        padding: .4rem .5rem
+        &.active
+            background-color: $alt-blue
+            color: $white
+            .icon
+                color: $white !important
+            &:hover
+                color: $white
+        .media
+            display: flex
+            justify-content: center
+            .icon
+                color: $un9
