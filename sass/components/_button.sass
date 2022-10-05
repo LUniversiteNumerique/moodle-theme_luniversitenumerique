@@ -1,0 +1,91 @@
+.btn
+    &-un
+        +button
+        font-weight: 600
+    &-access
+        +button-full($main)
+    &-outline-secondary,
+    &.btn-secondary
+        +button
+        padding: .5em .9em
+        &:hover
+            background: $main
+            border-color: $main
+            color: white
+            i.icon
+                color: white !important
+
+.form-btn
+    -moz-appearance: none
+    background: $green
+    background-color: $green
+    border: none
+    border-radius: 0
+    color: $white
+    cursor: pointer
+    display: inline-block
+    font-size: 1.5rem
+    font-weight: 600
+    letter-spacing: 0.0333em
+    line-height: 1.25
+    margin: 0
+    opacity: 1
+    padding: 1.1em 1.44em
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: opacity 0.15s linear
+
+.aalink,
+a[role="button"],
+a.dropdown-toggle,
+.btn
+    &:focus,
+    &.focus
+        outline: 0 !important
+        box-shadow: none !important
+    &.disabled,
+    &:disabled
+        outline: 0 !important
+        box-shadow: none !important
+    &:not(:disabled):not(.disabled)
+        &:active,
+        &.active
+            outline: 0 !important
+            box-shadow: none !important
+
+            &:focus
+                outline: 0 !important
+                box-shadow: none !important
+
+.simplesearchform
+    .btn-open
+        border-color: transparent
+        background-color: transparent
+        .icon
+            color: $main !important
+    #searchform-navbar
+        &.show
+            input.form-control
+                border-color: $main
+                outline-style: none
+                box-shadow: none
+            .btn
+                border-color: $main
+                background-color: $main
+                .icon
+                    color: white !important
+            .btn-close
+                border-color: transparent
+                background-color: transparent
+                .icon
+                    color: $main !important
+    input.form-control
+        border-color: $main
+        outline-style: none
+        box-shadow: none
+    .btn.search-icon
+        border-color: $main
+        background-color: $main
+        .icon
+            color: white
