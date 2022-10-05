@@ -64,4 +64,3 @@ $THEME->layouts = [
         'defaultregion' => 'side-pre',
     ),
 ];
-$THEME->prescsscallback = 'theme_luniversitenumerique_get_pre_scss';
