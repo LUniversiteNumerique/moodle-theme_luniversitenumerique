@@ -1,0 +1,33 @@
+footer
+    &#footer-main
+        background: $main
+        color: $white
+        *
+            color: $white
+        .border-mixin
+            +border($bottom: 1px)
+        .footer-logos
+            .widget
+                .image
+                    max-width: 100%
+                    height: auto
+        .logo
+            height: 90px
+        .menu
+            padding-left: 0
+            .menu-item
+                list-style-type: none
+                color: $white
+                a
+                    color: $white
+                    font-weight: bold
+                    font-size: 19px
+                    font-family: $main-font-bold
+                    &::before
+                        @include arrow-right
+        .footer-credits
+            &.border-mixin
+                @include border($top: 1px)
+            .footer-copyright
+                font-family: $main-font-bold
+                font-size: 19px
