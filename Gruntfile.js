@@ -21,8 +21,8 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            files: ["amd/src/*.js"],
-            tasks: ["amd"]
+            files: ["amd/src/*.js", "sass/*.sass"],
+            tasks: ["amd", "sass"]
         },
         eslint: {
             options: {
@@ -103,7 +103,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                  "styles.css": "sass/main.sass",
+                    "style/main.css": "sass/main.sass",
                 },
             }
         }
