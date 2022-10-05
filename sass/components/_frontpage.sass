@@ -1,0 +1,70 @@
+.header-navbar-container
+    border-bottom: 1px solid $main
+
+.frontpage-container
+    color: $main
+    font-size: 1.1em
+    margin-top: 4em
+    margin-bottom: 4em
+
+#frontpage-banner
+    margin-top: 80px
+    @media (max-width: 768px)
+        margin-top: 40px
+    .slogan
+        h1
+            +semibold-text($color: $main, $size: 3.2rem)
+            @media (max-width: 768px)
+                +semibold-text($color: $main, $size: 2.5rem)
+        p
+            color: $main
+            font-size: 1.1em
+    .brand-bg
+        +background-image($frontpage-img, $position-x: 50%, $position-y: 30%, $repeat: no-repeat, $size: contain)
+        bottom: 0px
+        box-sizing: border-box
+        min-height: 300px
+    
+#page-site-index
+    h2, h3
+        color: $main
+        font-weight: bold
+    .jumbotron
+        background-image: $jumbotron-img
+        background-size: cover
+        background-position: 50% 65%
+        padding: 0
+        .jumbotron-inner
+            background-color: $jumbotron-inner
+            padding: 4rem 2rem
+            color: white
+
+.category-container
+    background-color: $pastel-purple
+    margin-top: 5em
+    margin-bottom: 5em
+    .card-deck
+        .card-category
+            background: $white
+            border-width: 2px
+            border-style: solid
+            .card-body
+                .card-title
+                    margin-bottom: 0
+                    padding-top: 1em
+                    padding-bottom: 1em
+                    text-align: center
+                    font-family: $main-font-bold
+                    font-size: 1.25rem
+                    a
+                        font-family: $main-font-bold
+                        font-size: 1.45rem
+            .card-footer
+                background: $white
+                border: none
+                text-align: right
+
+.home-block-container
+    padding: 1.25rem
+    .block
+        padding: 1.25rem
