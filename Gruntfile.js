@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            files: ["amd/src/*.js", "sass/*.sass"],
+            files: ["amd/src/*.js", "sass/**/*.sass"],
             tasks: ["amd", "sass"]
         },
         eslint: {
