@@ -1,5 +1,5 @@
 #block-region-side-pre
-    .block-region
+    &.block-region
         section.block
             background-color: $pastel-purple
             border: 0px
@@ -21,9 +21,7 @@
     &-recentlyaccessedcourses,
     &_myoverview.block
         .card
-            -moz-box-shadow: 0px 3px 8px $card-color
-            -webkit-box-shadow: 0px 3px 8px $card-color
-            box-shadow: 0px 3px 8px $card-color
+            +box-shadow(0px, 3px, 8px, $card-color)
             .card-img
                 padding: 10px
             .aalink.coursename
