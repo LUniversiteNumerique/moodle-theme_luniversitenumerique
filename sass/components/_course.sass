@@ -11,9 +11,7 @@
         margin-top: 50px
     .card
         background-color: $white
-        -moz-box-shadow: 0px 3px 8px $card-color
-        -webkit-box-shadow: 0px 3px 8px $card-color
-        box-shadow: 0px 3px 8px $card-color
+        +box-shadow(0px, 3px, 8px, $card-color)
         .card
             &-body
                 flex-grow: 0
@@ -192,8 +190,8 @@
     .section
         &.section-summary
             padding: 1.2em 0.1em !important
-            box-shadow: 0px 3px 8px $course-section
             border: 2px solid $pastel-purple
+            +box-shadow(0px, 3px, 8px, $course-section)
             .section-icon
                 background-image: $default-section-img
                 background-repeat: no-repeat

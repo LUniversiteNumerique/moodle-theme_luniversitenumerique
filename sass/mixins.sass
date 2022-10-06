@@ -89,3 +89,8 @@
     padding-right: $padding-right
     font-size: .8rem
     color: $main
+
+@mixin box-shadow($offset-x, $offset-y, $blur-radius, $color)
+    -moz-box-shadow: $offset-x $offset-y $blur-radius $color
+    -webkit-box-shadow: $offset-x $offset-y $blur-radius $color
+    box-shadow: $offset-x $offset-y $blur-radius $color
