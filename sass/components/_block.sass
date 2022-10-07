@@ -19,13 +19,17 @@
 
 .block
     &-recentlyaccessedcourses,
-    &_myoverview.block
+    &_myoverview
+        .card-deck
+            margin-top: $margin-card
         .card
             +box-shadow(0px, 3px, 8px, $card-color)
             .card-img
                 padding: 10px
-            .aalink.coursename
-                @include bold-text($color: $main, $size: 1em)
+            .aalink,
+            .coursename
+                > *
+                    +semibold-text($color: $main, $size: 1em)
             .progress
                 border-radius: 0px
                 border: 0px !important
