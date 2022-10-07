@@ -4,6 +4,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['choosereadme'] = 'Theme L\'Université Numérique';
 $string['pluginname'] = 'Theme L\'Université Numérique';
+$string['textssettings'] = 'Texts settings';
 $string['advancedsettings'] = 'Advanced settings';
 // The brand colour setting.                                                                                                        
 $string['brandcolor'] = 'Brand colour';
@@ -40,3 +41,5 @@ $string['settings:frontpage'] = 'Home page type';
 $string['settings:frontpage_desc'] = 'Home page type depending on the platform\'s type';
 $string['settings:frontpage_default'] = 'Classic';
 $string['settings:frontpage_training'] = 'Training';
+$string['settings:download_instructions_body'] = 'Texte des instructions de téléchargement';
+$string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';

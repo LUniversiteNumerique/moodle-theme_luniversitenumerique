@@ -28,7 +28,6 @@ if ($ADMIN->fulltree) {
     $settings = new theme_boost_admin_settingspage_tabs('themesettingluniversitenumerique', get_string('configtitle', 'theme_luniversitenumerique'));
     $page = new admin_settingpage('theme_luniversitenumerique_general', get_string('generalsettings', 'theme_luniversitenumerique'));
 
-    // Variable $body-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_luniversitenumerique/brandcolor';
     $title = get_string('brandcolor', 'theme_luniversitenumerique');
@@ -38,6 +37,18 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Must add the page after definiting all the settings!
+    $settings->add($page);
+
+    // Texts settings.
+    $page = new admin_settingpage('theme_luniversitenumerique_texts', get_string('textssettings', 'theme_luniversitenumerique'));
+
+    $page->add(new admin_setting_confightmleditor(
+        'theme_luniversitenumerique/download_instructions_body',
+        new lang_string('settings:download_instructions_body', 'theme_luniversitenumerique'),
+        new lang_string('settings:download_instructions_body_desc', 'theme_luniversitenumerique'),
+        '')
+    );
+
     $settings->add($page);
 
     // Advanced settings.
