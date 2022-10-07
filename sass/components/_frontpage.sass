@@ -9,12 +9,12 @@
 
 #frontpage-banner
     margin-top: 80px
-    @media (max-width: 768px)
+    @media (max-width: $sm-breakpoint-width)
         margin-top: 40px
     .slogan
         h1
             +semibold-text($color: $main, $size: 3.2rem)
-            @media (max-width: 768px)
+            @media (max-width: $sm-breakpoint-width)
                 +semibold-text($color: $main, $size: 2.5rem)
         p
             color: $main
