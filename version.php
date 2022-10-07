@@ -24,7 +24,7 @@
                                                             
 defined('MOODLE_INTERNAL') || die();                                                                                                
                                                                                               
-$plugin->version = 2022100401;                                                                   
+$plugin->version = 2022100700;                                                                   
 $plugin->requires = 2016102100;
 $plugin->component = 'theme_luniversitenumerique';                                                                                                 
 $plugin->dependencies = [                                                                                                           

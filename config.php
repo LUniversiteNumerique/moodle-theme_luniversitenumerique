@@ -35,6 +35,9 @@ $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+$THEME->scss = function($theme) {
+    return theme_boost_get_main_scss_content($theme);
+};
 
 $THEME->layouts = [
     'frontpage' => array(
