@@ -48,6 +48,7 @@ $THEME->layouts = [
    'base' => array(
         'file' => 'columns2.php',
         'regions' => array(),
+        'options' => array('langmenu' => true),
     ),
     'course'  => array(
         'file' => 'course.php',
@@ -65,5 +66,6 @@ $THEME->layouts = [
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
+        'options' => array('langmenu' => true),
     ),
 ];
