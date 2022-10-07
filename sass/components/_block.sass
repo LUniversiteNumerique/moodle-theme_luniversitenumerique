@@ -19,7 +19,9 @@
 
 .block
     &-recentlyaccessedcourses,
-    &_myoverview.block
+    &_myoverview
+        .card-deck
+            margin-top: $margin-card
         .card
             +box-shadow(0px, 3px, 8px, $card-color)
             .card-img
