@@ -38,20 +38,6 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 
-global $DB;
-$sql = "SELECT id,name,idnumber FROM {course_categories} WHERE parent = 0 AND id > 1;";
-$results = $DB->get_records_sql($sql);
-$categories = array();
-foreach ($results as $category) {
-    if ($category->idnumber != "") {
-        $categories[] = array(
-            'name' => $category->name,
-            'idnumber' => $category->idnumber,
-            'link' => new moodle_url('/course/index.php', array('categoryid' => $category->id))
-        );
-    }
-}
-
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
@@ -84,7 +70,6 @@ if (isloggedin() && !behat_is_test_site()) {
         'regionmainsettingsmenu' => $regionmainsettingsmenu,
         'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
         'isloggedin' => isloggedin(),
-        'categories' => $categories,
         'logintoken' => \core\session\manager::get_login_token(),
         'logo-un' => $OUTPUT->image_url('logo-un', 'theme'),
         'logo-white' => $OUTPUT->image_url('logo-white', 'theme'),
@@ -105,10 +90,6 @@ if (isloggedin()) {
     echo $OUTPUT->render_from_template('theme_luniversitenumerique/frontpage-loggedin', $templatecontext);
     return;
 } else {
-    if ($settings->frontpage == 'training') {
-        echo $OUTPUT->render_from_template('theme_luniversitenumerique/frontpage-training', $templatecontext);
-        return;
-    }
     echo $OUTPUT->render_from_template('theme_luniversitenumerique/frontpage', $templatecontext);
     return;
 }
