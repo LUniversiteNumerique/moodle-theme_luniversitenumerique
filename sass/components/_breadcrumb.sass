@@ -2,12 +2,12 @@
     border: 0px !important
     margin-bottom: 1.75em
     .breadcrumb-item
-        font-weight: 600
         &:before
             color: $pastel-purple
         a
             color: $main
             transition: 0.3s
+            +semibold-text($color: $main, $size: 1em)
             &:hover
                 color: $green
                 text-decoration: none
