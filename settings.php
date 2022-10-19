@@ -41,7 +41,7 @@ if ($ADMIN->fulltree) {
 
     // Texts settings.
     $page = new admin_settingpage('theme_luniversitenumerique_texts', get_string('textssettings', 'theme_luniversitenumerique'));
-
+/*
     $page->add(new admin_setting_confightmleditor(
         'theme_luniversitenumerique/download_instructions_body',
         new lang_string('settings:download_instructions_body', 'theme_luniversitenumerique'),
@@ -49,8 +49,16 @@ if ($ADMIN->fulltree) {
         '')
     );
 
-    $settings->add($page);
+    $page->add(new admin_setting_configstoredfile(
+        'theme_luniversitenumerique/images',
+        new lang_string('settings:licence_image', 'theme_luniversitenumerique'),
+        new lang_string('settings:licence_image_desc', 'theme_luniversitenumerique'),
+        0,
+        ['accepted_types' => ['image']])
+    );
 
+    $settings->add($page);
+*/
     // Advanced settings.
     $page = new admin_settingpage('theme_luniversitenumerique_advanced', get_string('advancedsettings', 'theme_luniversitenumerique'));
 
