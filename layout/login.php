@@ -17,10 +17,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * A login page layout for the boost theme.
+ * Layout login file.
  *
- * @package   theme_boost
- * @copyright 2016 Damyon Wiese
+ * @package   theme_luniversitenumerique
+ * @copyright 2022 Pierre Duverneix
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
