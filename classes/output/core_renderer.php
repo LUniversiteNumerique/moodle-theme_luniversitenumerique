@@ -65,13 +65,16 @@ class core_renderer extends \core_renderer {
     }
     
     public function full_header() {
-        global $CFG, $COURSE, $PAGE;
+        global $CFG, $COURSE, $PAGE, $USER;
 
         require_once($CFG->libdir. '/filestorage/file_storage.php');
         require_once($CFG->dirroot. '/course/lib.php');
         $fs = get_file_storage();
         $context = context_course::instance($COURSE->id);
         $files = $fs->get_area_files($context->id, 'course', 'overviewfiles', false, 'filename', false);
+
+        $admins = get_admins();
+        $isadmin = in_array($USER->id, array_keys($admins));
 
         if (count($files)) {
             $overviewfilesoptions = course_overviewfiles_options($COURSE->id);
@@ -117,6 +120,9 @@ class core_renderer extends \core_renderer {
         $header->settingsmenu = $this->context_header_settings_menu();
         $header->contextheader = $this->context_header();
         $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
+        if (!$isadmin) {
+            $header->hasnavbar = false;
+        }
         $header->navbar = $this->navbar();
         $header->pageheadingbutton = $this->page_heading_button();
         $header->courseheader = $this->course_header();
