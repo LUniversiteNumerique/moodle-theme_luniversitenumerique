@@ -4,7 +4,16 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['choosereadme'] = 'Thème L\'Université Numérique';
 $string['pluginname'] = 'Thème L\'Université Numérique';
-$string['advancedsettings'] = 'Advanced settings';
+// Settings
+$string['generalsettings'] = 'Réglages généraux';
+$string['textssettings'] = 'Réglages des textes';
+$string['advancedsettings'] = 'Réglages avancés';
+$string['settings:frontpage'] = 'Type de page d\'accueil';
+$string['settings:frontpage_desc'] = 'Type de page d\'accueil (plateforme classique ou de formation)';
+$string['settings:frontpage_default'] = 'Classique';
+$string['settings:frontpage_training'] = 'Formation';
+$string['settings:download_instructions_body'] = 'Texte des instructions de téléchargement';
+$string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';
 // The brand colour setting.                                                                                                        
 $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.                                                                                            
@@ -12,9 +21,7 @@ $string['brandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
 $string['choosereadme'] = 'Theme L\'Université Numérique is a child theme of Boost. It adds the ability to upload background photos.';
 // Name of the settings pages.                                                                                                      
-$string['configtitle'] = 'L\'Université Numérique settings';
-// Name of the first settings tab.                                                                                                  
-$string['generalsettings'] = 'General settings';
+$string['configtitle'] = 'L\'Université Numérique settings';                                                                                              
 // Preset files setting.                                                                                                            
 $string['presetfiles'] = 'Additional theme preset files';
 // Preset files help text.                                                                                                          
@@ -33,10 +40,4 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 // We need to include a lang string for each block region.                                                                          
 $string['region-side-pre'] = 'Right';
-
 $string['downloadable-course'] = 'Cours téléchargeable';
-
-$string['settings:frontpage'] = 'Type de page d\'accueil';
-$string['settings:frontpage_desc'] = 'Type de page d\'accueil (plateforme classique ou de formation)';
-$string['settings:frontpage_default'] = 'Classique';
-$string['settings:frontpage_training'] = 'Formation';

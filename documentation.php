@@ -15,18 +15,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Boost config.
  *
  * @package   theme_luniversitenumerique
  * @copyright 2022 Pierre Duverneix
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-                                                            
-defined('MOODLE_INTERNAL') || die();                                                                                                
-                                                                                              
-$plugin->version = 2022100703;                                                                   
-$plugin->requires = 2016102100;
-$plugin->component = 'theme_luniversitenumerique';                                                                                                 
-$plugin->dependencies = [                                                                                                           
-    'theme_boost' => 2016102100                                                                                                  
-];
+
+require_once(__DIR__ . '/../../config.php');
+
+$pageurl = new moodle_url('/theme/luniversitenumerique/documentation.php');
+$context = context_system::instance();
+
+$PAGE->set_url($pageurl);
+$PAGE->set_context($context);
+$PAGE->set_pagelayout('standard');
+
+echo $OUTPUT->header();
+
+$content = get_config('theme_luniversitenumerique', 'download_instructions_body');
+
+echo $content;
+
+echo $OUTPUT->footer();

@@ -28,38 +28,6 @@ if ($ADMIN->fulltree) {
     $settings = new theme_boost_admin_settingspage_tabs('themesettingluniversitenumerique', get_string('configtitle', 'theme_luniversitenumerique'));
     $page = new admin_settingpage('theme_luniversitenumerique_general', get_string('generalsettings', 'theme_luniversitenumerique'));
 
-    // Preset.
-    $name = 'theme_luniversitenumerique/preset';
-    $title = get_string('preset', 'theme_luniversitenumerique');
-    $description = get_string('preset_desc', 'theme_luniversitenumerique');
-    $default = 'default.scss';
-
-    $context = context_system::instance();
-    $fs = get_file_storage();
-    $files = $fs->get_area_files($context->id, 'theme_luniversitenumerique', 'preset', 0, 'itemid, filepath, filename', false);
-
-    $choices = [];
-    foreach ($files as $file) {
-        $choices[$file->get_filename()] = $file->get_filename();
-    }
-    // These are the built in presets.
-    $choices['default.scss'] = 'default.scss';
-    $choices['plain.scss'] = 'plain.scss';
-
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    // Preset files setting.
-    $name = 'theme_luniversitenumerique/presetfiles';
-    $title = get_string('presetfiles','theme_luniversitenumerique');
-    $description = get_string('presetfiles_desc', 'theme_luniversitenumerique');
-
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
-        array('maxfiles' => 20, 'accepted_types' => array('.scss')));
-    $page->add($setting);
-
-    // Variable $body-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_luniversitenumerique/brandcolor';
     $title = get_string('brandcolor', 'theme_luniversitenumerique');
@@ -71,6 +39,26 @@ if ($ADMIN->fulltree) {
     // Must add the page after definiting all the settings!
     $settings->add($page);
 
+    // Texts settings.
+    $page = new admin_settingpage('theme_luniversitenumerique_texts', get_string('textssettings', 'theme_luniversitenumerique'));
+/*
+    $page->add(new admin_setting_confightmleditor(
+        'theme_luniversitenumerique/download_instructions_body',
+        new lang_string('settings:download_instructions_body', 'theme_luniversitenumerique'),
+        new lang_string('settings:download_instructions_body_desc', 'theme_luniversitenumerique'),
+        '')
+    );
+
+    $page->add(new admin_setting_configstoredfile(
+        'theme_luniversitenumerique/images',
+        new lang_string('settings:licence_image', 'theme_luniversitenumerique'),
+        new lang_string('settings:licence_image_desc', 'theme_luniversitenumerique'),
+        0,
+        ['accepted_types' => ['image']])
+    );
+
+    $settings->add($page);
+*/
     // Advanced settings.
     $page = new admin_settingpage('theme_luniversitenumerique_advanced', get_string('advancedsettings', 'theme_luniversitenumerique'));
 
