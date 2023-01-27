@@ -32,6 +32,12 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'logo-un' => $OUTPUT->image_url('logo-un', 'theme'),
     'logo-white' => $OUTPUT->image_url('logo-white', 'theme'),
+    'logo-uved' => $OUTPUT->image_url('logos/logo-uved', 'theme'),
+    'logo-uness' => $OUTPUT->image_url('logos/logo-uness', 'theme'),
+    'logo-unit' => $OUTPUT->image_url('logos/logo-unit', 'theme'),
+    'logo-iutenligne' => $OUTPUT->image_url('logos/logo-iutenligne', 'theme'),
+    'logo-uoh' => $OUTPUT->image_url('logos/logo-uoh', 'theme'),
+    'logo-aunege' => $OUTPUT->image_url('logos/logo-aunege', 'theme'),
     'year' => date("Y")
 ];
 
