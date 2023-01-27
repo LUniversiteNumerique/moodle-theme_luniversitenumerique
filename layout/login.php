@@ -17,10 +17,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * A login page layout for the boost theme.
+ * Layout login file.
  *
- * @package   theme_boost
- * @copyright 2016 Damyon Wiese
+ * @package   theme_luniversitenumerique
+ * @copyright 2022 Pierre Duverneix
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -32,6 +32,12 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'logo-un' => $OUTPUT->image_url('logo-un', 'theme'),
     'logo-white' => $OUTPUT->image_url('logo-white', 'theme'),
+    'logo-uved' => $OUTPUT->image_url('logos/logo-uved', 'theme'),
+    'logo-uness' => $OUTPUT->image_url('logos/logo-uness', 'theme'),
+    'logo-unit' => $OUTPUT->image_url('logos/logo-unit', 'theme'),
+    'logo-iutenligne' => $OUTPUT->image_url('logos/logo-iutenligne', 'theme'),
+    'logo-uoh' => $OUTPUT->image_url('logos/logo-uoh', 'theme'),
+    'logo-aunege' => $OUTPUT->image_url('logos/logo-aunege', 'theme'),
     'year' => date("Y")
 ];
 

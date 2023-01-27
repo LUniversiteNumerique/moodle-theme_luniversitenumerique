@@ -3,7 +3,7 @@
 const path = require("path");
 const sass = require("sass");
 
-var babelRename = function(destPath, srcPath) {
+var babelRename = function (destPath, srcPath) {
     destPath = srcPath.replace("src", "build");
     destPath = destPath.replace(".js", ".min.js");
     return destPath;
@@ -105,8 +105,8 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            amd: { 
-                src: [path.resolve(__dirname, "amd/src/*.js")] 
+            amd: {
+                src: [path.resolve(__dirname, "amd/src/*.js")]
             }
         },
         sass: {
