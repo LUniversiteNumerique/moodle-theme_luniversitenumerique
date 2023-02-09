@@ -65,7 +65,7 @@ class core_renderer extends \core_renderer {
     }
     
     public function full_header() {
-        global $CFG, $COURSE, $PAGE, $USER;
+        global $CFG, $DB, $COURSE, $PAGE, $USER;
 
         require_once($CFG->libdir. '/filestorage/file_storage.php');
         require_once($CFG->dirroot. '/course/lib.php');
@@ -75,6 +75,10 @@ class core_renderer extends \core_renderer {
 
         $admins = get_admins();
         $isadmin = in_array($USER->id, array_keys($admins));
+        // Get user system role matching the theme breadcrumbrole setting.
+        $contextsystem = \context_system::instance();
+        $breadcrumbrole = get_config('theme_luniversitenumerique', 'breadcrumbrole');
+        $userbreadcrumbrole = $DB->get_record("role_assignments", array("userid" => $USER->id, "contextid" => $contextsystem->id, "roleid" => $breadcrumbrole));
 
         if (count($files)) {
             $overviewfilesoptions = course_overviewfiles_options($COURSE->id);
@@ -120,7 +124,8 @@ class core_renderer extends \core_renderer {
         $header->settingsmenu = $this->context_header_settings_menu();
         $header->contextheader = $this->context_header();
         $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
-        if (!$isadmin) {
+        // Remove the navbar if the user musn't see it.
+        if (!$isadmin && !isset($userbreadcrumbrole->id)) {
             $header->hasnavbar = false;
         }
         $header->navbar = $this->navbar();

@@ -14,6 +14,8 @@ $string['settings:frontpage_default'] = 'Classique';
 $string['settings:frontpage_training'] = 'Formation';
 $string['settings:download_instructions_body'] = 'Texte des instructions de téléchargement';
 $string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';
+$string['settings:breadcrumbrole'] = 'Rôle fil d\'Ariane';
+$string['settings:breadcrumbrole_desc'] = 'Rôle système à qui afficher le fil d\'Ariane';
 // The brand colour setting.                                                                                                        
 $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.                                                                                            
