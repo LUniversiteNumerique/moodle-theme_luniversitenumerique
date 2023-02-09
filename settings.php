@@ -41,24 +41,7 @@ if ($ADMIN->fulltree) {
 
     // Texts settings.
     $page = new admin_settingpage('theme_luniversitenumerique_texts', get_string('textssettings', 'theme_luniversitenumerique'));
-/*
-    $page->add(new admin_setting_confightmleditor(
-        'theme_luniversitenumerique/download_instructions_body',
-        new lang_string('settings:download_instructions_body', 'theme_luniversitenumerique'),
-        new lang_string('settings:download_instructions_body_desc', 'theme_luniversitenumerique'),
-        '')
-    );
 
-    $page->add(new admin_setting_configstoredfile(
-        'theme_luniversitenumerique/images',
-        new lang_string('settings:licence_image', 'theme_luniversitenumerique'),
-        new lang_string('settings:licence_image_desc', 'theme_luniversitenumerique'),
-        0,
-        ['accepted_types' => ['image']])
-    );
-
-    $settings->add($page);
-*/
     // Advanced settings.
     $page = new admin_settingpage('theme_luniversitenumerique_advanced', get_string('advancedsettings', 'theme_luniversitenumerique'));
 
@@ -74,7 +57,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Theme frontpage layout option
+    // Theme frontpage layout option.
     $choices = array();
     $choices['default'] = get_string('settings:frontpage_default', 'theme_luniversitenumerique');
     $choices['training'] = get_string('settings:frontpage_training', 'theme_luniversitenumerique');
@@ -83,6 +66,22 @@ if ($ADMIN->fulltree) {
         get_string('settings:frontpage', 'theme_luniversitenumerique'),
         get_string('settings:frontpage_desc', 'theme_luniversitenumerique'), 'default', $choices);
     $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // System role to display breadcrumbs.
+    $contextsystem = \context_system::instance();
+    $systemroles = get_roles_for_contextlevels($contextsystem->contextlevel);
+    $insql = "IN (" . implode(',', array_keys($systemroles)) . ")";
+    $sql = "SELECT id, shortname FROM {role} WHERE id IN (SELECT roleid FROM {role_context_levels} WHERE id $insql)";
+    $roles = $DB->get_records_sql($sql);
+    $rolesarray = [];
+    foreach ($roles as $role) {
+        $rolesarray[$role->id] = $role->shortname;
+    }
+    $setting = new admin_setting_configselect(
+        'theme_luniversitenumerique/breadcrumbrole', 
+        get_string('settings:breadcrumbrole', 'theme_luniversitenumerique'),
+        get_string('settings:breadcrumbrole_desc', 'theme_luniversitenumerique'), 'default', $rolesarray);
     $page->add($setting);
 
     $settings->add($page);

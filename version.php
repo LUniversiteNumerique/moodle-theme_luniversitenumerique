@@ -18,15 +18,15 @@
  * Boost config.
  *
  * @package   theme_luniversitenumerique
- * @copyright 2022 Pierre Duverneix
+ * @copyright 2023 Pierre Duverneix
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-                                                            
-defined('MOODLE_INTERNAL') || die();                                                                                                
-                                                                                              
-$plugin->version = 2022100703;                                                                   
+
+defined('MOODLE_INTERNAL') || die();
+
+$plugin->version = 2023020900;
 $plugin->requires = 2016102100;
-$plugin->component = 'theme_luniversitenumerique';                                                                                                 
-$plugin->dependencies = [                                                                                                           
-    'theme_boost' => 2016102100                                                                                                  
+$plugin->component = 'theme_luniversitenumerique';
+$plugin->dependencies = [
+    'theme_boost' => 2016102100
 ];

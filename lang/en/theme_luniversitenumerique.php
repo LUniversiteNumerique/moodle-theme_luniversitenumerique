@@ -43,3 +43,5 @@ $string['settings:frontpage_default'] = 'Classic';
 $string['settings:frontpage_training'] = 'Training';
 $string['settings:download_instructions_body'] = 'Texte des instructions de téléchargement';
 $string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';
+$string['settings:breadcrumbrole'] = 'Breadcrumbs role';
+$string['settings:breadcrumbrole_desc'] = 'System role to display the breadcrumbs to';
