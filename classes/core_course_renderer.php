@@ -503,6 +503,7 @@ class theme_luniversitenumerique_core_course_renderer extends \core_course_rende
                 }
             }
         }
+
         if ($completionicon) {
             $formattedname = html_entity_decode($mod->get_formatted_name(), ENT_QUOTES, 'UTF-8');
             if (!$isediting && $istrackeduser && $completiondata->overrideby) {
@@ -561,6 +562,82 @@ class theme_luniversitenumerique_core_course_renderer extends \core_course_rende
                         array('class' => 'autocompletion'));
             }
         }
+        return $output;
+    }
+
+    /**
+     * Outputs contents for frontpage as configured in $CFG->frontpage or $CFG->frontpageloggedin
+     *
+     * @return string
+     */
+    public function frontpage() {
+        global $CFG, $SITE, $USER;
+
+        $output = '';
+
+        if (isloggedin() and !isguestuser() and isset($CFG->frontpageloggedin)) {
+            $frontpagelayout = $CFG->frontpageloggedin;
+        } else {
+            $frontpagelayout = $CFG->frontpage;
+        }
+
+        $admins = get_admins();
+        $isadmin = in_array($USER->id, array_keys($admins));
+        $hasbreadcrumbrole = theme_luniversitenumerique_has_breadcrumb_role();
+    
+        // The user isn't allowed to see the frontpage elements except the blocs.
+        if (!$isadmin && $hasbreadcrumbrole == false) {
+            return $output;
+        }
+
+        foreach (explode(',', $frontpagelayout) as $v) {
+            switch ($v) {
+                // Display the main part of the front page.
+                case FRONTPAGENEWS:
+                    if ($SITE->newsitems) {
+                        // Print forums only when needed.
+                        require_once($CFG->dirroot .'/mod/forum/lib.php');
+                        if (($newsforum = forum_get_course_forum($SITE->id, 'news')) &&
+                                ($forumcontents = $this->frontpage_news($newsforum))) {
+                            $newsforumcm = get_fast_modinfo($SITE)->instances['forum'][$newsforum->id];
+                            $output .= $this->frontpage_part('skipsitenews', 'site-news-forum',
+                                $newsforumcm->get_formatted_name(), $forumcontents);
+                        }
+                    }
+                    break;
+
+                case FRONTPAGEENROLLEDCOURSELIST:
+                    $mycourseshtml = $this->frontpage_my_courses();
+                    if (!empty($mycourseshtml)) {
+                        $output .= $this->frontpage_part('skipmycourses', 'frontpage-course-list',
+                            get_string('mycourses'), $mycourseshtml);
+                    }
+                    break;
+
+                case FRONTPAGEALLCOURSELIST:
+                    $availablecourseshtml = $this->frontpage_available_courses();
+                    $output .= $this->frontpage_part('skipavailablecourses', 'frontpage-available-course-list',
+                        get_string('availablecourses'), $availablecourseshtml);
+                    break;
+
+                case FRONTPAGECATEGORYNAMES:
+                    $output .= $this->frontpage_part('skipcategories', 'frontpage-category-names',
+                        get_string('categories'), $this->frontpage_categories_list());
+                    break;
+
+                case FRONTPAGECATEGORYCOMBO:
+                    $output .= $this->frontpage_part('skipcourses', 'frontpage-category-combo',
+                        get_string('courses'), $this->frontpage_combo_list());
+                    break;
+
+                case FRONTPAGECOURSESEARCH:
+                    $output .= $this->box($this->course_search_form(''), 'd-flex justify-content-center');
+                    break;
+
+            }
+            $output .= '<br />';
+        }
+
         return $output;
     }
 }
