@@ -98,3 +98,15 @@ function theme_luniversitenumerique_delete_menuitems(\flat_navigation $flatnav) 
         $flatnav->add($item);
     }
 }
+
+function theme_luniversitenumerique_has_breadcrumb_role() {
+    global $DB, $USER;
+    // Get user system role matching the theme breadcrumbrole setting.
+    $contextsystem = \context_system::instance();
+    $breadcrumbrole = get_config('theme_luniversitenumerique', 'breadcrumbrole');
+    $userbreadcrumbrole = $DB->get_record("role_assignments", array("userid" => $USER->id, "contextid" => $contextsystem->id, "roleid" => $breadcrumbrole));
+    if (isset($userbreadcrumbrole->id)) {
+        return true;
+    }
+    return false;
+}
