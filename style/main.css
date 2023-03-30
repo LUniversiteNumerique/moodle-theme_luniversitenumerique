@@ -5,3 +5,28 @@ body {
   font-family: "poppins-regular";
   font-weight: 100;
 }
+.btn-primary {
+  background-color: rgb(26, 35, 126);
+  border-color: rgb(26, 35, 126);
+}
+.card {
+  border-radius: 0;
+  border: none;
+}
+.card .card-body {
+  background-color: rgb(240, 241, 252);
+}
+.drawer {
+  background-color: white;
+}
+.page-header-headings {
+  color: rgb(26, 35, 126);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(26, 35, 126);
+}
