@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Boost config.
+ * Theme L'Université Numérique config.
  *
  * @package   theme_luniversitenumerique
  * @copyright 2023 Pierre Duverneix
@@ -24,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2023031500;
-$plugin->requires = 2016102100;
+$plugin->version = 2023033000;
+$plugin->requires = 2022111800;
 $plugin->component = 'theme_luniversitenumerique';
 $plugin->dependencies = [
-    'theme_boost' => 2016102100
+    'theme_boost' => 2022112800
 ];
