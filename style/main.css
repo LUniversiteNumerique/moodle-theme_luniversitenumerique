@@ -1,1 +1,7 @@
 /* src/sass/index.sass */
+*,
+html,
+body {
+  font-family: "poppins-regular";
+  font-weight: 100;
+}
