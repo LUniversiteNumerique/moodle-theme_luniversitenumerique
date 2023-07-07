@@ -19,8 +19,38 @@ body {
 .card .card-body {
   background-color: rgb(240, 241, 252);
 }
+#frontpage-available-course-list h2 {
+  margin-bottom: 30px;
+}
+.courses .coursebox {
+  border-radius: 0 !important;
+  border: 0 !important;
+  background-color: #eee;
+}
+.courses .coursebox:hover {
+  background-color: #e5e5e5;
+}
+.courses .coursebox .info .coursename {
+  font-size: 1.15em;
+}
+.courses .coursebox .info .coursename a {
+  font-family: "poppins-bold";
+  color: rgb(22, 130, 125);
+}
 .drawer {
   background-color: white;
+}
+.dropdown-menu {
+  border-radius: 0;
+  background-color: rgb(240, 241, 252);
+  border: 0;
+}
+.dropdown-menu .dropdown-item,
+.dropdown-menu .header {
+  color: rgb(26, 35, 126);
+}
+.dropdown-menu .dropdown-divider {
+  border-top: 1px solid rgb(240, 241, 252);
 }
 nav.navbar .primary-navigation nav.navigation ul.nav li a {
   font-family: "poppins-bold";
