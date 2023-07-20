@@ -5,12 +5,26 @@ body {
   font-family: "poppins-regular";
   font-weight: 100;
 }
+a:focus,
+a:focus-visible {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
 .btn {
   border-radius: 0;
 }
 .btn-primary {
   background-color: rgb(26, 35, 126);
   border-color: rgb(26, 35, 126);
+}
+.drawer-toggles .drawer-toggler .btn {
+  background-color: rgb(26, 35, 126);
+  color: white;
+}
+.drawer-toggles .drawer-toggler .btn:focus,
+.drawer-toggles .drawer-toggler .btn:focus-visible {
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 .card {
   border-radius: 0;
@@ -40,20 +54,112 @@ body {
 .drawer {
   background-color: white;
 }
+.drawer .drawertoggle {
+  background-color: rgb(26, 35, 126);
+  color: white;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+}
+.drawer .drawertoggle:focus,
+.drawer .drawertoggle:focus-visible {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
 .dropdown-menu {
   border-radius: 0;
-  background-color: rgb(240, 241, 252);
+  background-color: rgb(26, 35, 126);
   border: 0;
+  margin-top: 0;
+  color: white;
 }
 .dropdown-menu .dropdown-item,
 .dropdown-menu .header {
-  color: rgb(26, 35, 126);
+  color: white !important;
+}
+.dropdown-menu .dropdown-item .btn-icon,
+.dropdown-menu .header .btn-icon {
+  background-color: white !important;
 }
 .dropdown-menu .dropdown-divider {
-  border-top: 1px solid rgb(240, 241, 252);
+  border-top: 1px solid rgb(26, 35, 126);
 }
-nav.navbar .primary-navigation nav.navigation ul.nav li a {
+.input-group input.form-control {
+  border-radius: 0 !important;
+  border-color: rgb(26, 35, 126);
+  color: rgb(26, 35, 126);
+}
+.input-group input.form-control::placeholder {
+  color: rgb(118, 187, 255) !important;
+  opacity: 1 !important;
+}
+.navbar.fixed-top,
+.secondary-navigation .navigation {
+  border-bottom: 1px solid rgb(26, 35, 126);
+}
+.navbar.fixed-top nav ul.nav li a,
+.secondary-navigation nav ul.nav li a {
   font-family: "poppins-bold";
+  color: rgb(26, 35, 126) !important;
+}
+.navbar.fixed-top nav ul.nav li a.active,
+.secondary-navigation nav ul.nav li a.active {
+  border-bottom-color: rgb(26, 35, 126);
+}
+.navbar.fixed-top #usernavigation .langmenu,
+.navbar.fixed-top #usernavigation .usermenu,
+.navbar.fixed-top #usernavigation .input-group,
+.secondary-navigation #usernavigation .langmenu,
+.secondary-navigation #usernavigation .usermenu,
+.secondary-navigation #usernavigation .input-group {
+  color: rgb(26, 35, 126);
+}
+.navbar.fixed-top #usernavigation .langmenu a,
+.navbar.fixed-top #usernavigation .usermenu a,
+.navbar.fixed-top #usernavigation .input-group a,
+.secondary-navigation #usernavigation .langmenu a,
+.secondary-navigation #usernavigation .usermenu a,
+.secondary-navigation #usernavigation .input-group a {
+  color: rgb(26, 35, 126);
+  font-weight: bold;
+}
+.navbar.fixed-top #usernavigation .langmenu a:focus,
+.navbar.fixed-top #usernavigation .langmenu a:focus-visible,
+.navbar.fixed-top #usernavigation .usermenu a:focus,
+.navbar.fixed-top #usernavigation .usermenu a:focus-visible,
+.navbar.fixed-top #usernavigation .input-group a:focus,
+.navbar.fixed-top #usernavigation .input-group a:focus-visible,
+.secondary-navigation #usernavigation .langmenu a:focus,
+.secondary-navigation #usernavigation .langmenu a:focus-visible,
+.secondary-navigation #usernavigation .usermenu a:focus,
+.secondary-navigation #usernavigation .usermenu a:focus-visible,
+.secondary-navigation #usernavigation .input-group a:focus,
+.secondary-navigation #usernavigation .input-group a:focus-visible {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.navbar.fixed-top #usernavigation .langmenu .userbutton .avatars .avatar .userinitials,
+.navbar.fixed-top #usernavigation .usermenu .userbutton .avatars .avatar .userinitials,
+.navbar.fixed-top #usernavigation .input-group .userbutton .avatars .avatar .userinitials,
+.secondary-navigation #usernavigation .langmenu .userbutton .avatars .avatar .userinitials,
+.secondary-navigation #usernavigation .usermenu .userbutton .avatars .avatar .userinitials,
+.secondary-navigation #usernavigation .input-group .userbutton .avatars .avatar .userinitials {
+  background: linear-gradient(180deg, rgb(251, 233, 231) 25%, rgb(118, 187, 255) 100%);
+  color: rgb(26, 35, 126);
+}
+.navbar.fixed-top #usernavigation .nav-link:focus,
+.navbar.fixed-top #usernavigation .nav-link:focus-visible,
+.secondary-navigation #usernavigation .nav-link:focus,
+.secondary-navigation #usernavigation .nav-link:focus-visible {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.navbar.fixed-top #usernavigation .input-group .text-primary,
+.secondary-navigation #usernavigation .input-group .text-primary {
+  color: rgb(26, 35, 126) !important;
+}
+.navbar.fixed-top #usernavigation .icon,
+.secondary-navigation #usernavigation .icon {
   color: rgb(26, 35, 126);
 }
 .page-header-headings {
