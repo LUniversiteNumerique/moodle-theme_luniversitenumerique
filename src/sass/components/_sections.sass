@@ -46,3 +46,24 @@
         color: $main-color
       a
         color: $main-color
+
+.course-content
+  .topics
+    .section
+      &.course-section
+        &:not(#section-0)
+          border: 2px solid $pastel-purple
+          border-bottom-color: rgb(240, 241, 252)
+          border-bottom-style: solid
+          border-bottom-width: 2px
+          border-radius: $border-radius
+          -moz-box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          -webkit-box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          padding: 1em
+          margin-top: 30px
+  .single-section
+    .section
+      border: 0 !important
+      background-color: white !important
+      box-shadow: none !important

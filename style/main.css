@@ -265,6 +265,12 @@ a:focus-visible {
 .secondary-navigation #usernavigation .icon {
   color: rgb(26, 35, 126);
 }
+.moremenu .nav-link {
+  transition: all 0.25s !important;
+}
+.moremenu .nav-link:hover {
+  margin-top: -1px;
+}
 .page-header-headings {
   color: rgb(26, 35, 126);
 }
@@ -359,6 +365,23 @@ body.limitedwidth #page.drawers .main-inner {
 }
 .single-section .section-navigation .nextsection a {
   color: rgb(26, 35, 126);
+}
+.course-content .topics .section.course-section:not(#section-0) {
+  border: 2px solid rgb(240, 241, 252);
+  border-bottom-color: rgb(240, 241, 252);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 3px 8px rgba(176, 176, 176, 0.15);
+  -webkit-box-shadow: 0 3px 8px rgba(176, 176, 176, 0.15);
+  box-shadow: 0 3px 8px rgba(176, 176, 176, 0.15);
+  padding: 1em;
+  margin-top: 30px;
+}
+.course-content .single-section .section {
+  border: 0 !important;
+  background-color: white !important;
+  box-shadow: none !important;
 }
 h1,
 h2,
