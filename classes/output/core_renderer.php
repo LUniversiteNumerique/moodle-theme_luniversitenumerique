@@ -369,6 +369,10 @@ class core_renderer extends \core_renderer {
             }
         }
 
+        if ($COURSE->id) {
+            $header->course_url = "$CFG->wwwroot/course/view.php?id=$COURSE->id";
+        }
+
         $courseimage = "";
         foreach ($files as $file) {
             $isimage = $file->is_valid_image();

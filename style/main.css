@@ -76,11 +76,11 @@ a:focus-visible {
   outline: 0 !important;
   box-shadow: none !important;
 }
-.card {
+.block-region:not(#block-region-content) .card {
   border-radius: 10px;
   border: none;
 }
-.card .card-body {
+.block-region:not(#block-region-content) .card .card-body {
   background-color: rgb(240, 241, 252);
 }
 #frontpage-available-course-list h2 {
@@ -175,7 +175,7 @@ a:focus-visible {
   border-radius: 10px !important;
 }
 .input-group input.form-control {
-  border-radius: 10px !important;
+  border-radius: 0 !important;
   border-color: rgb(26, 35, 126);
   color: rgb(26, 35, 126);
 }
@@ -298,7 +298,11 @@ body.limitedwidth #page.drawers .main-inner {
 #page-header .course-header-image {
   margin-bottom: 20px;
 }
+#page-header .course-header-image a {
+  display: flex;
+}
 #page-header .course-header-image img {
+  pointer-events: none;
   border-radius: 10px;
 }
 #page-header .page-context-header .page-header-headings h1,
