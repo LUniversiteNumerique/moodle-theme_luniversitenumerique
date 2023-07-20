@@ -7,3 +7,42 @@
   .section-navigation
     &.navigationtitle
       display: none !important
+
+    .larrow,
+    .rarrow
+      position: relative
+      display: none
+
+    .prevsection
+      position: relative
+      display: inline-flex
+      margin-left: 20px
+      &::before
+        position: absolute
+        content: "<"
+        height: 15px
+        width: 15px
+        left: -20px
+        font-family: $main-font-bold
+        font-size: 1.5em
+        line-height: 1em
+        color: $main-color
+      a
+        color: $main-color
+
+    .nextsection
+      position: relative
+      display: inline-flex
+      margin-right: 20px
+      &::after
+        position: absolute
+        content: ">"
+        height: 15px
+        width: 15px
+        right: -20px
+        font-family: $main-font-bold
+        font-size: 1.5em
+        line-height: 1em
+        color: $main-color
+      a
+        color: $main-color

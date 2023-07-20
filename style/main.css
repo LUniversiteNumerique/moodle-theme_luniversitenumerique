@@ -12,18 +12,28 @@ a:focus-visible {
 }
 .activityiconcontainer {
   border-radius: 10px;
+  background: white !important;
+  border-width: 3px;
+  border-style: solid;
 }
 .activityiconcontainer.assessment {
-  background-color: #ff7043;
+  border-color: rgb(255, 112, 67);
+  box-shadow: rgba(255, 112, 67, 0.25) 0px 2px 8px 0px;
 }
 .activityiconcontainer.collaboration {
-  background-color: #f7c926;
+  border-color: rgb(247, 201, 38);
+  box-shadow: rgba(247, 201, 38, 0.25) 0px 2px 8px 0px;
 }
 .activityiconcontainer.communication {
-  background-color: #16827d;
+  border-color: rgb(22, 130, 125);
+  box-shadow: rgba(22, 130, 125, 0.25) 0px 2px 8px 0px;
 }
 .activityiconcontainer.content {
-  background-color: rgb(60, 145, 230);
+  border-color: rgb(60, 145, 230);
+  box-shadow: rgba(60, 145, 230, 0.25) 0px 2px 8px 0px;
+}
+.activityiconcontainer .activityicon {
+  filter: none !important;
 }
 .activity-item {
   background-color: rgb(240, 241, 252);
@@ -306,6 +316,49 @@ body.limitedwidth #page.drawers .main-inner {
 }
 .single-section .section-navigation.navigationtitle {
   display: none !important;
+}
+.single-section .section-navigation .larrow,
+.single-section .section-navigation .rarrow {
+  position: relative;
+  display: none;
+}
+.single-section .section-navigation .prevsection {
+  position: relative;
+  display: inline-flex;
+  margin-left: 20px;
+}
+.single-section .section-navigation .prevsection::before {
+  position: absolute;
+  content: "<";
+  height: 15px;
+  width: 15px;
+  left: -20px;
+  font-family: "poppins-bold";
+  font-size: 1.5em;
+  line-height: 1em;
+  color: rgb(26, 35, 126);
+}
+.single-section .section-navigation .prevsection a {
+  color: rgb(26, 35, 126);
+}
+.single-section .section-navigation .nextsection {
+  position: relative;
+  display: inline-flex;
+  margin-right: 20px;
+}
+.single-section .section-navigation .nextsection::after {
+  position: absolute;
+  content: ">";
+  height: 15px;
+  width: 15px;
+  right: -20px;
+  font-family: "poppins-bold";
+  font-size: 1.5em;
+  line-height: 1em;
+  color: rgb(26, 35, 126);
+}
+.single-section .section-navigation .nextsection a {
+  color: rgb(26, 35, 126);
 }
 h1,
 h2,

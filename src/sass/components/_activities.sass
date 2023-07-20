@@ -1,13 +1,22 @@
 .activityiconcontainer
   border-radius: $border-radius
+  background: white !important
+  border-width: 3px
+  border-style: solid
   &.assessment
-    background-color: $assessment__color
+    border-color: $assessment__color
+    box-shadow: rgba(255, 112, 67, 0.25) 0px 2px 8px 0px
   &.collaboration
-    background-color: $collaboration__color
+    border-color: $collaboration__color
+    box-shadow: rgba(247, 201, 38, 0.25) 0px 2px 8px 0px
   &.communication
-    background-color: $communication__color
+    border-color: $communication__color
+    box-shadow: rgba(22, 130, 125, 0.25) 0px 2px 8px 0px
   &.content
-    background-color: $content__color
+    border-color: $content__color
+    box-shadow: rgba(60, 145, 230, 0.25) 0px 2px 8px 0px
+  .activityicon
+    filter: none !important
 
 .activity-item
   background-color: $pastel-purple
