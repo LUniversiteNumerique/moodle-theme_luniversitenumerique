@@ -1,4 +1,5 @@
 .activityiconcontainer
+  border-radius: $border-radius
   &.assessment
     background-color: $assessment__color
   &.collaboration
@@ -11,10 +12,14 @@
 .activity-item
   background-color: $pastel-purple
   border: 0 !important
-  border-radius: 0
+  border-radius: $border-radius
 
   .activityname
     a
       color: $main-color
       .instancename
         font-family: $main-font-bold
+
+.modtype_label
+  .activity-item
+    background-color: white
