@@ -1,0 +1,73 @@
+<header id="page-header" class="row">
+    {{#backgroundimage}}
+        <div class="col-12">
+            <div class="row header-img-wrapper">
+                <div class="pre-image col-12">
+                    <div class="pre-image-content" style="background-image:url({{{preimage}}})"></div>
+                </div>
+                <img src="{{{backgroundimage}}}" class="col-12 img-fluid" id="header-img">
+                
+                <div class="post-image col-12">
+                    <img src="{{{postimage}}}" class="d-flex ml-auto mr-3" width="160">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-4 {{^hasnavbar}}mb-4{{/hasnavbar}}">
+            <div class="d-flex">
+                {{#contextheader}}
+                <div class="mr-auto">
+                    {{{contextheader}}}
+                </div>
+                {{/contextheader}}
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="d-flex">
+                        <div class="ml-auto">
+                            {{{pageheadingbutton}}}
+                        </div>
+                        <div id="course-header">
+                            {{{courseheader}}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 page-header-course-summary">
+            {{#summary}}
+                {{{summary}}}
+            {{/summary}}
+        </div>
+    {{/backgroundimage}}
+    {{^backgroundimage}}
+        <div class="col-12">
+            <div class="{{^contextheader}}border-0 bg-transparent{{/contextheader}}">
+                <div class="{{^contextheader}}p-2{{/contextheader}}">
+                    <div class="d-flex">
+                        {{#contextheader}}
+                        <div class="mr-auto">
+                            {{{contextheader}}}
+                        </div>
+                        {{/contextheader}}
+
+                        {{#settingsmenu}}
+                        <div class="context-header-settings-menu">
+                            {{{settingsmenu}}}
+                        </div>
+                        {{/settingsmenu}}
+                        <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                            {{#headeractions}}
+                                <div class="header-action ml-2">{{{.}}}</div>
+                            {{/headeractions}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/backgroundimage}}
+</header>
