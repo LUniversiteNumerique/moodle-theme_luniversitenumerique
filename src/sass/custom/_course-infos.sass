@@ -1,0 +1,34 @@
+@mixin punchyInfos($display)
+  display: $display
+  flex-flow: row wrap
+  border: 1px solid $punchy-border-color
+  padding: .75em 1em
+  border-top: 0
+  &.active
+    display: flex
+    border-radius: 0 0 $border-radius $border-radius
+    .tr
+      display: flex
+      width: 100%
+      text-align: left
+      padding: 0.25em 0em
+      border-radius: $border-radius
+      transition: 0.5s
+      &:hover
+        background-color: $pastel-purple
+        .th
+          display: flex
+          align-items: center
+          font-weight: bold
+          min-width: 200px
+          width: 170px
+          background-color: $pastel-purple
+          border-radius: $border-radius
+          padding: .5em 1em
+          color: $main-color
+        .td
+          flex-grow: 1
+          padding: .5em 1em
+
+.punchy-infos
+  +punchyInfos(none)

@@ -1,0 +1,69 @@
+.sectionname
+  a
+    font-family: $main-font-bold
+    color: $main-color
+
+.single-section
+  .section-navigation
+    &.navigationtitle
+      display: none !important
+
+    .larrow,
+    .rarrow
+      position: relative
+      display: none
+
+    .prevsection
+      position: relative
+      display: inline-flex
+      margin-left: 20px
+      &::before
+        position: absolute
+        content: "<"
+        height: 15px
+        width: 15px
+        left: -20px
+        font-family: $main-font-bold
+        font-size: 1.5em
+        line-height: 1em
+        color: $main-color
+      a
+        color: $main-color
+
+    .nextsection
+      position: relative
+      display: inline-flex
+      margin-right: 20px
+      &::after
+        position: absolute
+        content: ">"
+        height: 15px
+        width: 15px
+        right: -20px
+        font-family: $main-font-bold
+        font-size: 1.5em
+        line-height: 1em
+        color: $main-color
+      a
+        color: $main-color
+
+.course-content
+  .topics
+    .section
+      &.course-section
+        &:not(#section-0)
+          border: 2px solid $pastel-purple
+          border-bottom-color: rgb(240, 241, 252)
+          border-bottom-style: solid
+          border-bottom-width: 2px
+          border-radius: $border-radius
+          -moz-box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          -webkit-box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          box-shadow: 0 3px 8px rgba(176,176,176,.15)
+          padding: 1em
+          margin-top: 30px
+  .single-section
+    .section
+      border: 0 !important
+      background-color: white !important
+      box-shadow: none !important

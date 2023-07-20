@@ -1,0 +1,35 @@
+.drawer
+  background-color: white
+
+  .drawertoggle
+    background-color: $main-color
+    color: white
+    border-radius: 50%
+    height: 42px
+    width: 42px
+    +focus-invisible
+
+  &.drawer-left
+    background-color: $drawer__bg
+
+    .courseindex
+      .courseindex-item
+        color: $main-color
+        +focus-invisible
+        &.pageitem
+          background-color: $alt-blue
+          border-radius: $border-radius
+          .completioninfo
+            .icon
+              color: white
+            &.completion_complete
+              .icon
+                color: $yellow
+          a
+            color: white
+        .completioninfo
+          &.completion_complete
+            color: $green
+        a
+          color: $main-color
+          +focus-invisible

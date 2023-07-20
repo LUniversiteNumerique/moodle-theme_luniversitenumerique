@@ -1,0 +1,55 @@
+.navbar.fixed-top,
+.secondary-navigation .navigation
+  border-bottom: 1px solid $main-color
+
+.secondary-navigation .navigation
+  padding: 0 !important
+  margin: 0 calc(0.5rem + 15px) !important
+
+.navbar.fixed-top,
+.secondary-navigation
+  nav
+    ul.nav
+      li
+        a
+          font-family: $main-font-bold
+          color: $main-color !important
+          &.active
+            border-bottom-color: $main-color
+        &.dropdown
+          .dropdown-menu
+            a
+              color: white !important
+
+    .nav-tabs
+      max-width: $max_size__main !important
+      margin: 0 auto
+
+  #usernavigation
+    .langmenu,
+    .usermenu,
+    .input-group
+      color: $main-color
+      a
+        color: $main-color
+        font-weight: bold
+        +focus-invisible
+      .userbutton
+        .avatars
+          .avatar
+            .userinitials
+              background: linear-gradient(180deg, rgba(251, 233, 231, 1) 25%, rgba(118, 187, 255, 1) 100%)
+              color: $main-color
+    .nav-link
+      +focus-invisible
+    .input-group
+      .text-primary
+        color: $main-color !important
+    .icon
+      color: $main-color
+
+.moremenu
+  .nav-link
+    transition: all .25s !important
+    &:hover
+      margin-top: -1px
