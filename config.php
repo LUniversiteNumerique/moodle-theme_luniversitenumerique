@@ -18,7 +18,7 @@
  * Config file.
  *
  * @package   theme_luniversitenumerique
- * @copyright 2022 Pierre Duverneix
+ * @copyright 2023 Pierre Duverneix
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'luniversitenumerique';
-$THEME->sheets = ['main'];
+$THEME->sheets = ['fonts', 'main'];
 $THEME->javascripts_footer = [];
 $THEME->editor_sheets = [];
 $THEME->parents = ['boost'];
@@ -35,37 +35,3 @@ $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
-$THEME->scss = function($theme) {
-    return theme_boost_get_main_scss_content($theme);
-};
-
-$THEME->layouts = [
-    'frontpage' => array(
-        'file' => 'frontpage.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre'
-    ),
-   'base' => array(
-        'file' => 'columns2.php',
-        'regions' => array(),
-        'options' => array('langmenu' => true),
-    ),
-    'course'  => array(
-        'file' => 'course.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => false, 'langmenu' => true),
-    ),
-    'incourse'  => array(
-        'file' => 'course.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => false, 'langmenu' => true),
-    ),
-    'admin' => array(
-        'file' => 'columns2.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('langmenu' => true),
-    ),
-];
