@@ -386,6 +386,7 @@ body.limitedwidth #page.drawers .main-inner {
   border: 0 !important;
   background-color: white !important;
   box-shadow: none !important;
+  padding: 0 !important;
 }
 h1,
 h2,

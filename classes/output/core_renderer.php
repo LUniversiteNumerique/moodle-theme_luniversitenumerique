@@ -350,6 +350,8 @@ class core_renderer extends \core_renderer {
         $header = new stdClass();
         $header->contextheader = $this->context_header();
         $header->courseheader = $this->course_header();
+        $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
+        $header->navbar = $this->navbar();
 
         if (count($files)) {
             $overviewfilesoptions = course_overviewfiles_options($COURSE->id);
