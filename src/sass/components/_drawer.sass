@@ -19,8 +19,17 @@
         &.pageitem
           background-color: $alt-blue
           border-radius: 0
+          .completioninfo
+            .icon
+              color: white
+            &.completion_complete
+              .icon
+                color: $yellow
           a
             color: white
+        .completioninfo
+          &.completion_complete
+            color: $green
         a
           color: $main-color
           +focus-invisible

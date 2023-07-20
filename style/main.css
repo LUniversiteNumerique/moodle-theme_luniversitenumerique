@@ -10,6 +10,29 @@ a:focus-visible {
   outline: 0 !important;
   box-shadow: none !important;
 }
+.activityiconcontainer.assessment {
+  background-color: #ff7043;
+}
+.activityiconcontainer.collaboration {
+  background-color: #f7c926;
+}
+.activityiconcontainer.communication {
+  background-color: #16827d;
+}
+.activityiconcontainer.content {
+  background-color: rgb(60, 145, 230);
+}
+.activity-item {
+  background-color: rgb(240, 241, 252);
+  border: 0 !important;
+  border-radius: 0;
+}
+.activity-item .activityname a {
+  color: rgb(26, 35, 126);
+}
+.activity-item .activityname a .instancename {
+  font-family: "poppins-bold";
+}
 .btn {
   border-radius: 0;
 }
@@ -19,6 +42,14 @@ a:focus-visible {
 }
 .btn-icon:hover {
   background-color: rgb(240, 241, 252) !important;
+}
+.btn-success {
+  background-color: rgb(22, 130, 125);
+  border-color: rgb(22, 130, 125);
+}
+.btn-success:hover {
+  background-color: rgb(26, 35, 126);
+  border-color: rgb(26, 35, 126);
 }
 .drawer-toggles .drawer-toggler .btn {
   background-color: rgb(26, 35, 126);
@@ -84,8 +115,17 @@ a:focus-visible {
   background-color: rgb(60, 147, 240);
   border-radius: 0;
 }
+.drawer.drawer-left .courseindex .courseindex-item.pageitem .completioninfo .icon {
+  color: white;
+}
+.drawer.drawer-left .courseindex .courseindex-item.pageitem .completioninfo.completion_complete .icon {
+  color: rgb(252, 209, 66);
+}
 .drawer.drawer-left .courseindex .courseindex-item.pageitem a {
   color: white;
+}
+.drawer.drawer-left .courseindex .courseindex-item .completioninfo.completion_complete {
+  color: rgb(22, 130, 125);
 }
 .drawer.drawer-left .courseindex .courseindex-item a {
   color: rgb(26, 35, 126);
