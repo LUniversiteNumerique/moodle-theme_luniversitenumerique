@@ -35,3 +35,9 @@ $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+$THEME->haseditswitch = true;
+$THEME->usescourseindex = true;
+// By default, all boost theme do not need their titles displayed.
+$THEME->activityheaderconfig = [
+    'notitle' => true
+];
