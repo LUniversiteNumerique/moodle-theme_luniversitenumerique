@@ -10,6 +10,28 @@ a:focus-visible {
   outline: 0 !important;
   box-shadow: none !important;
 }
+.alert-danger {
+  background-color: rgb(255, 186, 186);
+  border-color: rgb(255, 186, 186);
+}
+.alert-info {
+  background-color: rgb(185, 218, 252);
+  border-color: rgb(185, 218, 252);
+}
+.alert-success {
+  background-color: rgb(172, 250, 163);
+  border-color: rgb(172, 250, 163);
+}
+.alert-warning {
+  background-color: rgb(243, 222, 189);
+  border-color: rgb(243, 222, 189);
+}
+.editor_atto_toolbar {
+  border-radius: 10px 10px 0 0;
+}
+.editor_atto_content_wrap .editor_atto_content {
+  border-radius: 0 0 10px 10px !important;
+}
 .activityiconcontainer {
   border-radius: 10px;
   background: white !important;
@@ -48,6 +70,20 @@ a:focus-visible {
 }
 .modtype_label .activity-item {
   background-color: white;
+}
+.breadcrumb-item::before {
+  color: rgb(165, 169, 217) !important;
+  font-size: 0.75em !important;
+  line-height: 2em !important;
+  font-family: "poppins-bold" !important;
+}
+.breadcrumb-item a {
+  font-family: "poppins-bold";
+  color: rgb(22, 130, 125);
+}
+.breadcrumb-item span {
+  font-family: "poppins-bold";
+  color: rgb(142, 147, 156);
 }
 .btn {
   border-radius: 10px;
@@ -170,7 +206,6 @@ a:focus-visible {
   border-top: 1px solid rgb(26, 35, 126);
 }
 .form-control,
-.editor_atto_toolbar,
 .custom-select {
   border-radius: 10px !important;
 }
@@ -268,9 +303,6 @@ a:focus-visible {
 .moremenu .nav-link {
   transition: all 0.25s !important;
 }
-.moremenu .nav-link:hover {
-  margin-top: -1px;
-}
 .page-header-headings {
   color: rgb(26, 35, 126);
 }
@@ -291,8 +323,6 @@ body.limitedwidth #page.drawers .main-inner {
 }
 #page-header #region-main-box #region-main h2,
 #page-content #region-main-box #region-main h2 {
-  margin-left: 15px;
-  margin-right: 15px;
   margin-bottom: 30px;
 }
 #page-header .course-header-image {

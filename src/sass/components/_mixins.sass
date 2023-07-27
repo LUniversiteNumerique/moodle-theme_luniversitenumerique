@@ -3,3 +3,12 @@
   &:focus-visible
     outline: 0 !important
     box-shadow: none !important
+
+@mixin container-max-size()
+  max-width: $max_size__main
+  margin-left: auto
+  margin-right: auto
+
+@mixin bg-border($color)
+  background-color: $color
+  border-color: $color
