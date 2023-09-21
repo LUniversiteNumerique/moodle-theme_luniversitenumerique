@@ -45,3 +45,17 @@ $string['settings:download_instructions_body'] = 'Texte des instructions de tél
 $string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';
 $string['settings:breadcrumbrole'] = 'Breadcrumbs role';
 $string['settings:breadcrumbrole_desc'] = 'System role to display the breadcrumbs to';
+
+// Templates
+$string['templates:slogan'] = 'Educational resources sharing platform';
+$string['templates:description'] = 'The Université Numérique\'s Moodle platform is a repository for educational resources that extends the 
+"Je contribue" initiative, enabling any school or teacher to submit new materials which, once indexed, will become accessible to all.';
+$string['templates:connection'] = 'Connection';
+$string['templates:description_complement'] = 'Teachers have access to digital teaching resources that they can easily consult, 
+retrieve and integrate into their own teaching platforms thanks to the Moodle platform of <a href="http://luniversitenumerique.fr/" target="_blank" alt="Site de L\'Université Numérique" class="un-link">
+L\'Université Numérique</a>.
+<br><br>
+Just as the range of standard courses on <a href="http://www.fun-ressources.fr/" target="_blank" alt="Site de FUN-ressources" class="un-link">FUN-ressources</a> 
+is constantly evolving, the resources shared on this Moodle platform are destined to become ever more numerous.';
+$string['templates:guide'] = 'Discover our guide to downloading our content:';
+$string['templates:download_the_contents'] = 'Download the contents';
