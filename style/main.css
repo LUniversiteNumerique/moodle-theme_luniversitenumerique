@@ -148,6 +148,9 @@ body {
 .mod_questionnaire_completepage .qn-container {
   margin-bottom: 40px !important;
 }
+.mod_questionnaire_completepage .qn-container .qn-info {
+  background-color: #f7f7f7;
+}
 .mod_questionnaire_completepage .qn-container .qn-info .qn-number {
   background-color: #f7f7f7;
 }
