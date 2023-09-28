@@ -910,6 +910,34 @@ i.fa::before {
   padding: 0 4.7em;
 }
 
+#page-login-signup #page {
+  max-width: 1140px;
+}
+#page-login-signup #page .mform {
+  margin-bottom: 70px;
+}
+#page-login-signup #page .mform fieldset {
+  padding-bottom: 50px;
+}
+#page-login-signup #page .mform fieldset legend {
+  margin-bottom: 50px;
+}
+#page-login-signup #page .mform label {
+  color: #1a237e;
+  font-weight: bold;
+}
+#page-login-signup #page .mform .form-control,
+#page-login-signup #page .mform .custom-select {
+  border-color: #1a237e;
+  outline-style: none;
+  box-shadow: none;
+}
+#page-login-signup #page .mform .btn.btn-primary {
+  background: #1a237e;
+  border: 3px solid #1a237e;
+  color: #fff;
+}
+
 #page-mod-h5pactivity-view #course-region-main div[role=main] h2 {
   color: #1a237e;
   margin-top: 70px;
