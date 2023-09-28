@@ -948,11 +948,18 @@ i.fa::before {
 .frontpage-navbar .navbar-logo {
   width: 300px;
 }
+.frontpage-navbar ul.navbar-nav li.nav-item {
+  display: flex;
+  align-items: center;
+}
 .frontpage-navbar ul.navbar-nav li.nav-item a {
   font-family: "poppins-semibold";
   color: #1a237e !important;
   font-size: 1em;
   font-weight: 400;
+}
+.frontpage-navbar ul.navbar-nav li.nav-item .dropdown-menu .dropdown-item {
+  color: white !important;
 }
 
 ul.nav.navbar-nav .nav-item .icon {
