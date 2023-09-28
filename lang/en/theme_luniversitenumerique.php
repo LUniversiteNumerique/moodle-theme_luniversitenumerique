@@ -48,7 +48,7 @@ $string['settings:breadcrumbrole_desc'] = 'System role to display the breadcrumb
 
 // Templates
 $string['templates:slogan'] = 'Educational resources sharing platform';
-$string['templates:description'] = 'The Université Numérique\'s Moodle platform is a repository for educational resources that extends the 
+$string['templates:description'] = 'The Moodle platform of L\'Université Numérique\'s is a repository for educational resources that extends the 
 "Je contribue" initiative, enabling any school or teacher to submit new materials which, once indexed, will become accessible to all.';
 $string['templates:connection'] = 'Connection';
 $string['templates:description_complement'] = 'Teachers have access to digital teaching resources that they can easily consult, 
