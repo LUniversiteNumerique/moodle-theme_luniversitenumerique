@@ -87,7 +87,7 @@ function theme_luniversitenumerique_delete_menuitems(\flat_navigation $flatnav) 
     if ($coursehome != null) {
         $coursehome->iscustom = true;
         $coursehome->iscoursehome = true;
-        $coursehome->text = "Accueil du cours";
+        $coursehome->text = get_string('course_home', 'theme_luniversitenumerique');
         $coursehome->icon->pix = "i/sign-out-alt";
         $flatnav->add($coursehome);
     }

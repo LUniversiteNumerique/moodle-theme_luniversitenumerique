@@ -43,6 +43,9 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 // We need to include a lang string for each block region.                                                                          
 $string['region-side-pre'] = 'Right';
 $string['downloadable-course'] = 'Cours téléchargeable';
+$string['view_summary'] = 'Voir le résumé';
+$string['view_content'] = 'Accéder au contenu';
+$string['course_home'] = 'Accueil du cours';
 
 // Templates
 $string['templates:slogan'] = 'Plate-forme de partage de ressources pédagogiques';
@@ -59,3 +62,5 @@ De même que l\'offre de parcours types sur <a href="http://www.fun-ressources.f
 en constante évolution, les ressources partagées sur cette plate-forme Moodle ont vocation à être toujours plus nombreuses.';
 $string['templates:guide'] = 'Découvrez notre guide pour télécharger nos contenus :';
 $string['templates:download_the_contents'] = 'Télécharger les contenus';
+$string['templates:frontpage_loggedin_slogan'] = 'Des ressources éducatives libres pour tous';
+$string['templates:frontpage_loggedin_text'] = 'Un outil au service des établissements d\'enseignement supérieur et de recherche pour faciliter le développement des usages et de la mutualisation des ressources pédagogiques numériques.';

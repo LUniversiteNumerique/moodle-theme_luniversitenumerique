@@ -195,7 +195,7 @@ class theme_luniversitenumerique_core_course_renderer extends \core_course_rende
             $coursename, array('class' => $course->visible ? '' : 'dimmed'));
         // course access link
         $courseaccesslink = html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
-            'Accéder au cours', array('class' => $course->visible ? '' : 'dimmed'));
+            get_string('view_content', 'theme_luniversitenumerique'), array('class' => $course->visible ? '' : 'dimmed'));
 
         $content .= $this->get_course_image($course, $courseurl);
         $content .= $this->course_card_body($chelper, $course, $courselink);

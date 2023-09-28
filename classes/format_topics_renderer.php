@@ -71,7 +71,7 @@ class theme_luniversitenumerique_format_topics_renderer extends format_topics_re
             $summary = $this->format_summary_text($section);
             if ($summary != "") {
                 $o .= html_writer::start_tag('div', array('class' => 'summarytext mb-4'));
-                $o .= '<a class="collapse-link show-summary" data-toggle="collapse" href="#jalon'.$section->section.'-desc" role="button" aria-expanded="false" aria-controls="jalon'.$section->section.'-desc">Voir le résumé</a>';
+                $o .= '<a class="collapse-link show-summary" data-toggle="collapse" href="#jalon'.$section->section.'-desc" role="button" aria-expanded="false" aria-controls="jalon'.$section->section.'-desc">'.get_string('view_summary', 'theme_luniversitenumerique').'</a>';
                 $o .= html_writer::start_tag('div', array('id' => 'jalon'.$section->section.'-desc', 'class' => 'jalon-desc collapse')) . $summary . html_writer::end_tag('div');
                 $o .= html_writer::end_tag('div');
             }
@@ -80,7 +80,7 @@ class theme_luniversitenumerique_format_topics_renderer extends format_topics_re
         if ($section->uservisible || $section->visible) {
             $sectionurl = course_get_url($course, $section->section, array('navigation' => true));
             $o .= html_writer::start_tag('div', array('class' => 'mt-3 mb-3'));
-            $o .= html_writer::link($sectionurl, 'Accéder au contenu <i class="fa fa-arrow-right pl-2 p-1"></i>', array('class' => 'btn-un mt-4 d-inline-flex')) . html_writer::end_tag('div');
+            $o .= html_writer::link($sectionurl, get_string('view_content', 'theme_luniversitenumerique').' <i class="fa fa-arrow-right pl-2 p-1"></i>', array('class' => 'btn-un mt-4 d-inline-flex')) . html_writer::end_tag('div');
         }
 
         $image = $this->output->image_url('section-default', 'theme');

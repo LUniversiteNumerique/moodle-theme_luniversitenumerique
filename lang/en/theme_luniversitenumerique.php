@@ -45,6 +45,9 @@ $string['settings:download_instructions_body'] = 'Texte des instructions de tél
 $string['settings:download_instructions_body_desc'] = 'Texte des instructions de téléchargement des contenus';
 $string['settings:breadcrumbrole'] = 'Breadcrumbs role';
 $string['settings:breadcrumbrole_desc'] = 'System role to display the breadcrumbs to';
+$string['view_summary'] = 'View the summary';
+$string['view_content'] = 'View the content';
+$string['course_home'] = 'Course home';
 
 // Templates
 $string['templates:slogan'] = 'Educational resources sharing platform';
@@ -59,3 +62,5 @@ Just as the range of standard courses on <a href="http://www.fun-ressources.fr/"
 is constantly evolving, the resources shared on this Moodle platform are destined to become ever more numerous.';
 $string['templates:guide'] = 'Discover our guide to downloading our content:';
 $string['templates:download_the_contents'] = 'Download the contents';
+$string['templates:frontpage_loggedin_slogan'] = 'Free educational resources for all';
+$string['templates:frontpage_loggedin_text'] = 'A tool to help higher education and research establishments develop the use and sharing of digital educational resources.';
