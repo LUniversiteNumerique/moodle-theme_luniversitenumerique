@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "^0.19.3",
+    "esbuild": "^0.19.4",
     "esbuild-sass-plugin": "^2.15.0",
     "sass": "^1.67.0"
   }
