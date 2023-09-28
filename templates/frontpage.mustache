@@ -21,16 +21,14 @@
             <div class="row heading">
                 <div class="col-12 col-lg-5 mr-auto slogan">
                     <h1>
-                        Plate-forme de partage de ressources pédagogiques
+                        {{#str}} templates:slogan, theme_luniversitenumerique {{/str}}
                     </h1>
                     <p class="mt-5 mb-5">
-                        La plate-forme Moodle de <strong>l'Université Numérique</strong> est un centre de dépôt de ressources pédagogiques numériques qui prolonge 
-                        l’initiative “<strong>Je contribue</strong>” et qui permet à tout établissement, tout enseignant, de soumettre de nouveaux supports 
-                        numériques qui, une fois indexés, deviendront accessibles à tous.
+                        {{#str}} templates:description, theme_luniversitenumerique {{/str}}
                     </p>
                     <p class="mb-5">
-                        <a href="{{{ config.wwwroot }}}/login/index.php" alt="Connexion" class="btn-un">
-                            Connexion <i class="fa fa-arrow-right pl-2"></i>
+                        <a href="{{{ config.wwwroot }}}/login/index.php" alt="{{#str}} templates:connection, theme_luniversitenumerique {{/str}}" class="btn-un">
+                            {{#str}} templates:connection, theme_luniversitenumerique {{/str}} <i class="fa fa-arrow-right pl-2"></i>
                         </a>
                     </p>
                 </div>
@@ -57,17 +55,11 @@
         <div class="row">
             <div class="col-12 col-lg-7 mr-auto px-3">
                 <p class="mb-0">
-                    Grâce au Moodle de <a href="http://luniversitenumerique.fr/" target="_blank" alt="Site de L'Université Numérique" class="un-link">L'Université Numérique</a>,
-                    les établissements et les enseignants disposent de ressources pédagogiques
-                    numériques qu'ils peuvent facilement consulter, récupérer et intégrer dans leurs propres plates-formes pédagogiques.
-                    <br><br>
-                    De même que l'offre de parcours types sur <a href="http://www.fun-ressources.fr/" target="_blank" alt="Site de FUN-ressources" class="un-link">FUN-ressources</a>
-                    en constante évolution, les ressources partagées sur
-                    cette plate-forme Moodle ont vocation à être toujours plus nombreuses.
+                    {{#str}} templates:description_complement, theme_luniversitenumerique {{/str}}
                 </p>
-                <p>Découvrez notre guide pour télécharger nos contenus :</p>
+                <p>{{#str}} templates:guide, theme_luniversitenumerique {{/str}}</p>
                 <div class="mt-5">
-                    <a class="btn-un" href="/local/documentation/telechargement.php">Télécharger les contenus</a>
+                    <a class="btn-un" href="/local/documentation/telechargement.php">{{#str}} templates:download_the_contents, theme_luniversitenumerique {{/str}}</a>
                 </div>
             </div>
             <div class="col-8 col-lg-4 mx-auto d-none d-lg-block">

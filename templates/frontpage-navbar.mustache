@@ -9,8 +9,16 @@
             {{{ output.navbar_plugin_output }}}
         </li>
         <li class="nav-item">
-            <a href="{{{ config.wwwroot }}}/login/index.php" alt="Connexion" class="btn btn-un ml-2 ml-md-4 ml-lg-4">
-                Connexion <i class="fa fa-arrow-right pl-2"></i>
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                {{{ output.custom_menu }}}
+                <!-- page_heading_menu -->
+                {{{ output.page_heading_menu }}}
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="{{{ config.wwwroot }}}/login/index.php" alt="{{#str}} templates:connection, theme_luniversitenumerique {{/str}}" class="btn btn-un ml-2 ml-md-4 ml-lg-4">
+                {{#str}} templates:connection, theme_luniversitenumerique {{/str}} <i class="fa fa-arrow-right pl-2"></i>
             </a>
         </li>
     </ul>

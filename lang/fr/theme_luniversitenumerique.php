@@ -43,3 +43,19 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 // We need to include a lang string for each block region.                                                                          
 $string['region-side-pre'] = 'Right';
 $string['downloadable-course'] = 'Cours téléchargeable';
+
+// Templates
+$string['templates:slogan'] = 'Plate-forme de partage de ressources pédagogiques';
+$string['templates:description'] = 'La plate-forme Moodle de <strong>l\'Université Numérique</strong> est un centre de dépôt de ressources pédagogiques numériques qui prolonge 
+l’initiative “<strong>Je contribue</strong>” et qui permet à tout établissement, tout enseignant, de soumettre de nouveaux supports 
+numériques qui, une fois indexés, deviendront accessibles à tous.';
+$string['templates:connection'] = 'Connexion';
+$string['templates:description_complement'] = 'Grâce au Moodle de <a href="http://luniversitenumerique.fr/" target="_blank" alt="Site de L\'Université Numérique" class="un-link">
+L\'Université Numérique</a>,
+les établissements et les enseignants disposent de ressources pédagogiques
+numériques qu\'ils peuvent facilement consulter, récupérer et intégrer dans leurs propres plates-formes pédagogiques.
+<br><br>
+De même que l\'offre de parcours types sur <a href="http://www.fun-ressources.fr/" target="_blank" alt="Site de FUN-ressources" class="un-link">FUN-ressources</a>
+en constante évolution, les ressources partagées sur cette plate-forme Moodle ont vocation à être toujours plus nombreuses.';
+$string['templates:guide'] = 'Découvrez notre guide pour télécharger nos contenus :';
+$string['templates:download_the_contents'] = 'Télécharger les contenus';
