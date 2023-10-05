@@ -4,7 +4,7 @@ defined('MOODLE_INTERNAL') || die;
 
 use format_topics\output\renderer;
 
-class theme_luniversitenumerique_format_topics_renderer extends format_topics_renderer {
+class theme_luniversitenumerique_format_topics_renderer extends format_topics\output\renderer {
     /**
      * Generate a summary of a section for display on the 'course index page'
      *
