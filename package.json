@@ -13,6 +13,6 @@
   "dependencies": {
     "esbuild": "^0.19.3",
     "esbuild-sass-plugin": "^2.15.0",
-    "sass": "^1.67.0"
+    "sass": "^1.69.1"
   }
 }
